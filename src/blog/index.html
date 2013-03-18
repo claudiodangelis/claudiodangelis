@@ -3,26 +3,38 @@ layout: default
 title: Blog
 ---
 
-<div class="centered">
+<div class="row-fluid">
+<div class="span10">
+	<div class="lead">Blog archive</div>
 
-<div class="lead">Blog archive</div>
 
-{% for post in site.posts %}
 
-<h4>{{ post.title }} <br/><small>{{ post.date | date: "%d %B %Y" }} <span style="color:black">in</span> {{ post.category }}</small></h4>
-<p><a href='{{post.url}}' class='btn btn-info'>
-	{% if post.lang == 'en' %}
-	Read post
+	{% for post in site.posts  %}
+<h4><a href="{{ post.url }}">{{ post.title }} </a><br/><small>{{ post.date | date: "%d %B %Y" }} <span style="color:black">in</span> {{ post.category }}</small></h4>
+		{{ post.content | more: "excerpt" }}
+<div class="lead"><a href="{{ post.url }}">	{% if post.lang == 'en' %}
+	Continue reading...
 {% endif %}
 
 {% if post.lang == 'it' %}
 
-Leggi il post
+Continua a leggere...
 
 {% endif %}
-</a></p>
+
+</a></div>
+
 <hr/>
 
-{% endfor %}
+    {% endfor %}
+
+<hr/>
 
 </div>
+
+{% include sidebar.html %}
+
+</div>
+
+
+    Continue reading...

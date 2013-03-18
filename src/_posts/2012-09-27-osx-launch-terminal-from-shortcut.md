@@ -7,6 +7,9 @@ category: osx
 
 
 <p>OSX as is doesn't allow users to set keyboard shortcuts to <b>launch</b> applications, but there are a bunch of 3rd-party softwares and workarounds to achieve that.</p>
+
+<!--more-->
+
 <p>If you don't want to use a 3d-party app then the best way to do that is creating a <em>service</em> that just launches an application, and then bind it to a given keyboard shortcut. Let's start:</p>
 <ol>
 <li><p>Open <b>Automator.app</b> and choose new &quot;Service&quot; document</p><p><img class="screenshot" src="/img/posts/automator_service.png" alt="Automator screenshot"/></p></li>

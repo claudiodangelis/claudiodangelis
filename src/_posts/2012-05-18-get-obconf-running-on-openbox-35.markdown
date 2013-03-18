@@ -10,9 +10,15 @@ category: linux
 <p>Current stable release of <a href="http://openbox.org/dist/obconf/">obconf</a>, 2.0.3, doesn't work with the last <a href="http://openbox.org/">openbox-3.5.</a></p>
 
 <p>Let's see how to get it working:</p>
+
+<!--more-->
+
+
 <ol>
 <li>Download from the current git repository:
 <pre><kbd>git clone git://git.openbox.org/dana/obconf obconf</kbd></pre>
+
+
 
 <li>Apply this patch to obconf/src/preview.c :
 <pre><a href="https://github.com/claudiodangelis/scripts/blob/master/openbox/obconf-openbox-3.5.patch">https://github.com/claudiodangelis/scripts/blob/master/openbox/obconf-openbox-3.5.patch</a></pre>

@@ -21,6 +21,9 @@ _WARNING: tested on OSX 10.8.2 only_
 Build and install packages with `./configure`, `make && sudo make install`, no particular flags required.
 
 
+<!--more-->
+
+
 ## Possible errors
 
 1. **gettext**     

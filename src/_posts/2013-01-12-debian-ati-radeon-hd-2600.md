@@ -9,7 +9,9 @@ category: linux
 
 I was experiencing several rendering issues on Chromium (**black squares/lines**, **scrolling issues**, **CSS3 animation issues**, etc) with my iMac's ATI Radeon HD 2600 XT video card; this was probably caused by the [AMD Catalyst driver](http://support.amd.com/it/gpudownload/linux/Pages/radeon_linux.aspx).
 
+
 After some researches I found the solution:
+
 
 First uninstall **fglrx**:
 
@@ -24,3 +26,6 @@ Reboot (not tested if actually needed), then:
 	sudo dpkg-reconfigure xserver-xorg
 
 Reboot again and everything should be fine.
+
+
+<!--more-->

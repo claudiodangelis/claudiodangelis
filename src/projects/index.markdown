@@ -3,6 +3,7 @@ layout: default
 title: Projects
 ---
 
+<div class="span10">
 
 {% for project in site.pages %}
 
@@ -11,7 +12,7 @@ title: Projects
 {% if project.title != 'Projects' %}
 
 
-<div class="centered"><h3>{{ project.title }}</h3>
+<div><h3>{{ project.title }}</h3>
 
 
 {{ project.descr }}
@@ -28,8 +29,12 @@ title: Projects
 {% endfor %}
 
 
-<div class="centered">
+<div>
 	<h3>Dartlang Italia</h3>
 <p>Community italiana di supporto dedicata a Dart, il linguaggio di programmazione made in Google</p>
 <p> <a href="http://www.dartlang-italia.it" class="btn btn-success">Vai al sito</a> </p>
 <hr/></div>
+
+</div>
+
+{% include sidebar.html %}

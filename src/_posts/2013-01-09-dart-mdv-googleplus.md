@@ -9,6 +9,8 @@ Today's blog post is about a sample application that uses Web UI and js librarie
 
 Funny story:  I chose to use Google API **javascript** client (handled with dart js-interop library) instead of **dart** client since the latter was outdated and while I was editing the code an interesting project appeared on GitHub: [dart-google-oauth2-library](https://github.com/Scarygami/dart-google-oauth2-library) by [+Gerwin Sturm](https://plus.google.com/112336147904981294875/posts). *dart-google-oauth2-library*  simplifies the whole authentication process in a significant way, so please consider the following just as an example of how js-interop works.
 
+<!--more-->
+
 ## The application
 
 The applicaton is very simple: once you have authenticated and the application is allowed to access your Google+ profile data, some information will be displayed: name, profile picture, tagline, "about me" and links. 
