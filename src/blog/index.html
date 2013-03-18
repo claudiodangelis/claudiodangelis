@@ -1,0 +1,28 @@
+---
+layout: default
+title: Blog
+---
+
+<div class="centered">
+
+<div class="lead">Blog archive</div>
+
+{% for post in site.posts %}
+
+<h4>{{ post.title }} <br/><small>{{ post.date | date: "%d %B %Y" }} <span style="color:black">in</span> {{ post.category }}</small></h4>
+<p><a href='{{post.url}}' class='btn btn-info'>
+	{% if post.lang == 'en' %}
+	Read post
+{% endif %}
+
+{% if post.lang == 'it' %}
+
+Leggi il post
+
+{% endif %}
+</a></p>
+<hr/>
+
+{% endfor %}
+
+</div>

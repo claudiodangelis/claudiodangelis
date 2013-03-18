@@ -1,0 +1,13 @@
+name: Claudio Dawson d'Angelis Home Page
+description: Web and Software Developer
+url: http://www.claudiodangelis.com
+version: 5.4
+safe: false
+auto: true
+server: false
+server_port: 4000
+source: .
+destination: /var/www/html
+permalink: /:year/:title/
+markdown: kramdown
+

@@ -1,0 +1,177 @@
+html{
+  overflow-x: hidden;
+  overflow-y: scroll; 
+}
+
+p,h1,h2,h3,h4,h5,h6 {
+  font-family: Open Sans, sans-serif;
+}
+
+@media (max-width: 767px) {
+/*
+  .prettyprint{
+    font-size: 11px;
+    font-style: inherit;
+  }*/
+
+  #globalSidebar{
+    visibility: hidden;
+    display: none;
+  }
+    .sidebar-nav{
+    visibility: hidden;
+    display: none;
+  }
+
+  .bottomAd{
+    visibility: hidden;
+    display: none;
+  }
+
+
+}
+
+@media (max-width: 1223px){
+  .adsense{
+    visibility: hidden;
+    display: none;
+  }
+}
+
+#mobileHome{
+
+}
+
+
+
+
+footer{
+  padding-bottom: 50px;
+}
+
+a.tagLink{
+  font-weight: normal;
+  color: white;
+}
+
+.clear{clear: both;}
+
+::selection {
+  background: hsl(59, 89%, 89%); /* Safari */
+  }
+::-moz-selection {
+  background: hsl(59, 89%, 89%); /* Firefox */
+}
+
+
+.textToBeSelected{
+  background: hsl(59, 89%, 89%);
+  font-weight: bolder;
+}
+
+.centered{
+  text-align: center;
+}
+
+.btn-img{
+  width: 15px
+}
+
+
+/* SOCIAL BUTTONS */
+.share_button {
+  padding: 5px 10px;
+  margin: 0 0 10px 0;
+}
+
+.plusbutton{
+        display:inline;
+        margin-left:4px;
+}
+
+/* this overrides 90px to 72px width to +1 button 
+.plusbutton div {
+  width:70px !important;
+}
+*/
+
+.twitterbutton{
+        display:inline;
+        margin-left:2px;
+}
+
+.fb-like {
+  display:inline;
+        margin-left:2px;
+}
+
+.fb-like span iframe {
+  margin-top:-4px;
+}
+
+.linkedinbutton{
+  display:inline;
+        margin-left:2px;
+}
+
+/*bootstrap tuning*/
+
+.carousel-img{
+    display: block;
+    margin: 0 auto;
+    line-height: 1;
+
+}
+
+
+/*.prettyprint{
+  border: 0;
+}*/
+
+pre,kbd,code {
+  background-color: #F7F7F9;
+          border:0;
+          font-size: 1em;
+          font-family: monospace;
+          font-weight: 400;
+}
+
+
+
+.screenshot{
+  width:500px;
+}
+
+
+kbd{
+  white-space: nowrap;
+  color: #000;
+  background: #eee;
+  border-style: solid;
+  border-color: #ccc #aaa #888 #bbb;
+  padding: 2px 6px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2),0 0 0 1px #ffffff inset;
+  -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2),0 0 0 1px #ffffff inset;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2),0 0 0 1px #ffffff inset;
+  background-color: #FAFAFA;
+  border-color: #CCCCCC #CCCCCC #FFFFFF;
+  border-style: solid solid none;
+  border-width: 1px 1px medium;
+  color: #444444;
+  font-family: 'Helvetica Neue',Helvetica,Arial,Sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  white-space: nowrap;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+
+#cane{
+  position: relative;
+  margin-bottom: -5px;
+  margin-top: -10px;
+}
