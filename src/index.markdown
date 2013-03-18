@@ -3,7 +3,6 @@ layout: default
 title: Home Page
 ---
 
-okokok
 
 <div id="desktopHome" class="hidden-phone">
 <div class="span6">
