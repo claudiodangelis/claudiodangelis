@@ -3,7 +3,7 @@ description: Web and Software Developer
 url: http://www.claudiodangelis.com
 version: 5.4
 safe: false
-auto: true
+auto: false
 server: false
 server_port: 4000
 source: .
