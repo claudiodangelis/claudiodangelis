@@ -2,7 +2,7 @@
 layout: default
 title: Home Page
 ---
-z
+
 
 <div id="desktopHome" class="hidden-phone">
 <div class="span6">
