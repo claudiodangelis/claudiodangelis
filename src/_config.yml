@@ -3,7 +3,7 @@ description: Posts about computers and stuff
 url: http://www.claudiodangelis.com
 version: 5.4
 safe: false
-auto: false
+auto: true
 server: false
 server_port: 4000
 source: .
