@@ -12,6 +12,4 @@ Questo episodio fa parte del programma **GDL Italia** che potete seguire sul blo
 
 
 
-<iframe width="853" height="480" src="http://www.youtube.com/embed/wcJ0zJQm7gw" frameborder="0" allowfullscreen></iframe>
-
-
+<iframe width="640" height="360" src="http://www.youtube.com/embed/wcJ0zJQm7gw" frameborder="0" allowfullscreen></iframe>
