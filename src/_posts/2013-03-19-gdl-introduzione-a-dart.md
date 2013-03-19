@@ -1,6 +1,6 @@
 ---
 layout: default
-title: GDL Italia. Introduzione a Dart: editor e codice di esempio
+title: GDL Italia&#58; Introduzione a Dart: editor e codice di esempio
 lang: it
 category: dart
 ---
