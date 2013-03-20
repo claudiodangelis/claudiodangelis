@@ -4,39 +4,24 @@ title: Blog
 ---
 
 <div class="row-fluid">
-<div class="span10">
-	<div class="lead">Blog archive</div>
-
-
-
-	{% for post in site.posts  %}
-<div class="blog_entry">
-	<h4><a href="{{ post.url }}">{{ post.title }} </a><br/><small>{{ post.date | date: "%d %B %Y" }} <span style="color:black">in</span> {{ post.category }}</small></h4>
+	<div class="span10">
+		<div class="lead">Blog archive</div>
+		{% for post in site.posts  %}
+		<div class="blog_entry">
+			<h4><a href="{{ post.url }}">{{ post.title }} </a><br/><small>{{ post.date | date: "%d %B %Y" }} <span style="color:black">in</span> {{ post.category }}</small></h4>
 		{{ post.content | more: "excerpt" }}
-<div class="lead"><a href="{{ post.url }}">	{% if post.lang == 'en' %}
-	Continue reading...
-{% endif %}
-
-{% if post.lang == 'it' %}
-
-Continua a leggere...
-
-{% endif %}
-
-</a></div>
-
-<hr/>
+			<div class="lead"><a href="{{ post.url }}">	{% if post.lang == 'en' %}
+			Continue reading...
+			{% endif %}
+			{% if post.lang == 'it' %}
+			Continua a leggere...
+			{% endif %}
+			</a>
+			</div>
+			<hr/>
+		</div>
+    	{% endfor %}
+    	<hr/>
+    </div>
+    {% include sidebar.html %}
 </div>
-
-    {% endfor %}
-
-<hr/>
-
-</div>
-
-{% include sidebar.html %}
-
-</div>
-
-
-    Continue reading...
