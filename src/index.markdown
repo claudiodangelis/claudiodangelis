@@ -7,7 +7,7 @@ title: Home Page
 <div id="desktopHome" class="hidden-phone">
 
 
-<div class="span6">
+<div class="span8">
 
 <p><em>Latest blog post:</em></p>
 <!-- begin preview -->
@@ -22,45 +22,35 @@ title: Home Page
 <!-- end preview-->
 
 <div class='centered'>
+
 <script type="text/javascript"><!--
 google_ad_client = "ca-pub-2659172953949717";
-/* homepage2 */
-google_ad_slot = "4924749282";
-google_ad_width = 234;
+/* homepage3 */
+google_ad_slot = "6325600485";
+google_ad_width = 468;
 google_ad_height = 60;
 //-->
 </script>
 <script type="text/javascript"
 src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
+
 </div>
 
 <div>
+
+<p><em>Recent blog posts:</em></p>
 
 
 {% for post in site.posts limit:5%}
 
 
-<h4>{{ post.title }} <br/><small>{{ post.date | date: "%d %B %Y" }} <span style="color:black">in</span> <b>{{ post.category }}</b></small></h4>
-
-
-<p><a href='{{post.url}}' class='btn btn-info btn-small'>
-{% if post.lang == 'en' %}
-	Read post
-{% endif %}
-
-{% if post.lang == 'it' %}
-
-Leggi il post
-
-{% endif %}
-
-</a></p>
+<h4><a href='{{post.url}}'>{{ post.title }}</a> <br/><small>{{ post.date | date: "%d %B %Y" }} <span style="color:black">in</span> <b>{{ post.category }}</b></small></h4>
 
 <hr/>
 {% endfor %}
 
-<div class="lead"><a href="/blog">Full blog archive</a></div>
+<div class="lead centered"><a href="/blog">Full blog archive</a></div>
 </div>
 
 </div>
@@ -96,8 +86,6 @@ Leggi il post
 		<p> <a href="http://www.dartlang-italia.it" class="btn btn-success">Vai al sito</a> </p>
 		<hr/>
 </div>
-
-{% include sidebar.html %}
 
 </div>
 

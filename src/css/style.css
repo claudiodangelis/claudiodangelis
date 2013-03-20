@@ -7,7 +7,7 @@ p,h1,h2,h3,h4,h5,h6 {
   font-family: Open Sans, sans-serif;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 979px) {
 /*
   .prettyprint{
     font-size: 11px;
@@ -28,14 +28,32 @@ p,h1,h2,h3,h4,h5,h6 {
     display: none;
   }
 
+  .sidebar{
+    visibility: hidden;
+    display: none;
+  }
+
+  .main_content{
+    width: 100%;
+  }
+
+  footer{
+    width: 95%;
+  }
+
 
 }
 
-@media (max-width: 1223px){
+@media (max-width: 500px){
   .adsense{
     visibility: hidden;
     display: none;
   }
+
+
+
+
+
 }
 
 #mobileHome{
@@ -47,6 +65,8 @@ p,h1,h2,h3,h4,h5,h6 {
 
 footer{
   padding-bottom: 50px;
+  margin-right: 350px;
+
 }
 
 a.tagLink{
@@ -176,15 +196,20 @@ kbd{
   margin-top: -10px;
 }
 
-.sidebar{
+.sidebar {
   background-color: #F7F7F9;
-  padding:15px;
+  right:0;
+  padding: 15px;
+  width: 300px;
+  position: fixed;
+  top:0;
+  padding-top: 60px;
 }
 
 #avatar{
-  vertical-align:middle;
   border:1px solid white;
-  width: 85px;
+  width: 65px;
+
 }
 
 #projects{
@@ -196,46 +221,12 @@ kbd{
   width:30px;
 }
 
-
-span.cursor {
-  display: inline-block;
-  background: #111;
-  margin-left: 1px;
- 
-  -webkit-animation: blink 2s linear 0s infinite;
-  -moz-animation: blink 2s linear 0s infinite;
-  -ms-animation: blink 2s linear 0s infinite;
-  -o-animation: blink 2s linear 0s infinite;
+.main_content{
+  float:left;
+  margin-right: 350px;
 }
 
-@-webkit-keyframes blink {
-  0%   { background: #0a0 }
-  47%  { background: #090 }
-  50%  { background: #000 }
-  97%  { background: #000 }
-  100% { background: #090 }
-}
- 
-@-moz-keyframes blink {
-  0%   { background: #0a0 }
-  47%  { background: #090 }
-  50%  { background: #000 }
-  97%  { background: #000 }
-  100% { background: #090 }
-}
- 
-@-ms-keyframes blink {
-  0%   { background: #0a0 }
-  47%  { background: #090 }
-  50%  { background: #000 }
-  97%  { background: #000 }
-  100% { background: #090 }
-}
- 
-@-o-keyframes blink {
-  0%   { background: #0a0 }
-  47%  { background: #090 }
-  50%  { background: #000 }
-  97%  { background: #000 }
-  100% { background: #090 }
+.blog_entry{
+  border-left:5px solid #bada55;
+  padding-left: 10px;
 }

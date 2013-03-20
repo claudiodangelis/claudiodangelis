@@ -138,6 +138,8 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po
 		
 			<div class="row-fluid">
 
+<div id="main_container" class="row-fluid">
+  <div class="main_content">
 
 
       {% if page.title != 'Home Page' and page.title != 'Blog' and page.title != 'About me' and page.title != 'Projects'  %}
@@ -149,15 +151,13 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po
       </h1>
 
       {% endif %}
-			{{ content }}
+      {{ content }}
+
+ {% if page.title != 'Home Page' and page.title != 'Blog' and page.title != 'About me' and page.title != 'Projects' %}
 
 
 
-      {% if page.title != 'Home Page' and page.title != 'Blog' and page.title != 'About me' and page.title != 'Projects' %}
-
-
-
-      <div class='container'>
+      <div class='container-fluid'>
 
 
 <div class="row">
@@ -207,6 +207,15 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
 
       {% endif %}
+
+
+      </div>
+
+      {% include sidebar.html %}</div>
+
+<div class="clear"></div>
+
+     
 
 			</div>
 </div>
