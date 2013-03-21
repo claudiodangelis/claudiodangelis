@@ -3,7 +3,7 @@ layout: default
 title: Projects
 ---
 
-<div class="span10">
+<div>
 {% for project in site.pages %}
 {% if project.url contains '/projects/' %}
 {% if project.title != 'Projects' %}
@@ -26,5 +26,3 @@ title: Projects
 		<hr/>
 	</div>
 </div>
-
-{% include sidebar.html %}

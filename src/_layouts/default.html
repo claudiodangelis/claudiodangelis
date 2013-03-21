@@ -93,6 +93,9 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po
   <div class="row-fluid">
     <div class="row-fluid">
       <div id="main_container" class="row-fluid">
+        <div id="sidebar_background"></div>
+                  {% include sidebar.html %}
+
         <div class="main_content">
           
           {% if page.title != 'Home Page' and page.title != 'Blog' and page.title != 'About me' and page.title != 'Projects'  %}
@@ -107,7 +110,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po
 
           {% if page.title != 'Home Page' and page.title != 'Blog' and page.title != 'About me' and page.title != 'Projects' %}
           <div class='container-fluid'>
-            <div class="row">
+            <div class="row-fluid">
               <div class="share_button">
                 <!-- follow button -->
                 <a href="https://twitter.com/daw___" class="twitter-follow-button" data-show-count="false">Follow @daw___</a>
@@ -156,10 +159,8 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po
 
           </div>
         
-          {% include sidebar.html %}
-        
+
         </div>
-        <div class="clear"></div>
       </div>
     </div>
   </div>

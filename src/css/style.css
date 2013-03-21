@@ -33,6 +33,11 @@ p,h1,h2,h3,h4,h5,h6 {
     display: none;
   }
 
+  #sidebar_background {
+    visibility: hidden;
+    display: none;
+  }
+
   .main_content{
     width: 100%;
   }
@@ -196,15 +201,7 @@ kbd{
   margin-top: -10px;
 }
 
-.sidebar {
-  background-color: #F7F7F9;
-  right:0;
-  padding: 15px;
-  width: 300px;
-  position: fixed;
-  top:0;
-  padding-top: 60px;
-}
+
 
 #avatar{
   border:1px solid white;
@@ -221,9 +218,33 @@ kbd{
   width:30px;
 }
 
+.sidebar {
+  padding: 20px;
+  width: 300px;
+  float: right;
+  margin-top: -20px;
+  margin-right: -20px; 
+
+}
+
+#sidebar_background {
+  position:fixed;
+  top:0;
+  right:0;
+  width: 330px;
+  height: 100%;
+  background-color: #F7F7F9;
+  z-index: -1;
+}
+
 .main_content{
-  float:left;
-  margin-right: 350px;
+    width: auto;
+    overflow: hidden;
+}
+
+#main_container{
+   height: auto;
+   overflow: hidden;
 }
 
 .blog_entry{
