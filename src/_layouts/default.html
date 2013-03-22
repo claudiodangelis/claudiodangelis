@@ -80,9 +80,17 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po
               </ul>
             </li>
             <li><a href="/about"><span class="badge badge-success"></span>&nbsp;about me</a></li>
-            <li><a onmouseover="$(this).tooltip()" data-placement="bottom" href="https://plus.google.com/115859961800127275872?rel=author" rel="tooltip" title="Circle me on Google+" id="tt-gplus"><img alt="G+ Logo" src="/img/googleplus.png"/></a></li>
-            <li><a onmouseover="$(this).tooltip()" data-placement="bottom" title="Follow me on Twitter" href="http://twitter.com/daw___"><img alt="Twitterlogo" src="/img/twitter.png"/></a></li>
-            <li><a onmouseover="$(this).tooltip()" rel="tooltip" data-placement="bottom" title="Follow me on github" href="http://github.com/claudiodangelis"><img src="/img/github-negate.png" alt="Github Logo"/></a></li>
+            <!-- Place this tag where you want the +1 button to render. -->
+            <li style="margin-top:10px"><div class="g-plusone" data-size="tall" data-annotation="inline" data-width="300"></div></li>
+
+            <!-- Place this tag after the last +1 button tag. -->
+            <script type="text/javascript">
+              (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+              })();
+            </script>
             <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
           </ul>
         </div><!--/.nav-collapse -->
