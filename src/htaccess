@@ -6,12 +6,10 @@ permalink: .htaccess
 Options -Indexes
 
 
-ErrorDocument 403 /?goto=error.php&errno=403
-ErrorDocument 404 /?goto=error.php&errno=404
-
-
 RewriteEngine on
 
+RewriteCond %{HTTP_HOST} ^claudiodangelis.com
+RewriteRule (.*) http://www.claudiodangelis.com/$1 [R=301,L]
 RewriteRule ^\+$	https://plus.google.com/115859961800127275872/posts
 RewriteRule ^twitter$	https://twitter.com/daw___
 RewriteRule ^github$	https://github.com/claudiodangelis
