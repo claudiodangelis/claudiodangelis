@@ -10,7 +10,7 @@ This is just an experiment to approach the new Dart programming language.
 
 It ain't supposed to be funny, educational, working fine, etc :-)
 
-- [Play hosted javascript version](http://claudiodangelis.com/dart-playpoker/playpoker.html)
+- [Play hosted javascript version](http://claudiodangelis.com/projects/dart-playpoker/playpoker.html)
 
 
 - Source code at [GitHub](https://github.com/claudiodangelis/dart-playpoker)
