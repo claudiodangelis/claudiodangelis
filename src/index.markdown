@@ -6,7 +6,6 @@ title: Home Page
 	<div class="">
 		<p><em>Latest blog post:</em></p>
 		<!-- begin preview -->
-
 		{% for post in site.posts limit:1 %}
 		<h3>{{ post.title }}</h3>
 			{{ post.content | more: "excerpt" }}
