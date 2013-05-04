@@ -73,7 +73,7 @@ About the installation, since the tool is at a **very early stage**, there's no 
 4. unplug the device and look at the magic; 
 
 
-If you want to reconfigure it, you have to run `./unplug2shutdown.pu --configure` again.
+If you want to reconfigure it, you have to run `./unplug2shutdown.py --configure` again.
 
 Here's the repository on GitHub, [unplug2shutdown](https://github.com/claudiodangelis/unplug2shutdown), I'd really like to read your feedback about it, thanks.
 
