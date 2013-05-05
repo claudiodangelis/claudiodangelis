@@ -77,3 +77,4 @@ If you want to reconfigure it, you have to run `./unplug2shutdown.py --configure
 
 Here's the repository on GitHub, [unplug2shutdown](https://github.com/claudiodangelis/unplug2shutdown), I'd really like to read your feedback about it, thanks.
 
+**EDIT**: Discuss it on [Raspberry Pi Google+  Community](https://plus.google.com/115859961800127275872/posts/FBq9Vx8y2hq)
