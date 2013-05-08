@@ -11,8 +11,7 @@ RewriteEngine on
 RewriteCond %{HTTP_HOST} ^claudiodangelis.com
 RewriteRule (.*) http://www.claudiodangelis.com/$1 [R=301,L]
 RewriteRule ^\+$	https://plus.google.com/115859961800127275872/posts
-RewriteRule ^twitter$	https://twitter.com/daw___
-RewriteRule ^github$	https://github.com/claudiodangelis
-RewriteRule ^gklst$		http://geekli.st/claudiodangelis
+RewriteRule ^@$  	https://twitter.com/daw___
+RewriteRule ^g$ 	https://github.com/claudiodangelis
 
 RewriteRule ^cv/	Claudio_d_Angelis_CV.pdf
