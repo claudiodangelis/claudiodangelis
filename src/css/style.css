@@ -155,10 +155,9 @@ a.tagLink{
 
 pre,kbd,code {
   background-color: #F7F7F9;
-          border:0;
-          font-size: 1em;
-          font-family: monospace;
-          font-weight: 400;
+  border:0;
+  font-size: 0.95em;
+  font-family: monospace;
 }
 
 
@@ -250,4 +249,17 @@ kbd{
 .blog_entry{
   border-left:5px solid #bada55;
   padding-left: 10px;
+}
+
+.sidebar_link {
+  font-size: small;
+}
+
+#article_content {
+  max-width: 700px;
+  margin: auto;
+  font-size: 1.12345em;
+  line-height: 1.5345em;
+  margin-top: 0.90909em;
+  margin-bottom: 0.90909em;
 }

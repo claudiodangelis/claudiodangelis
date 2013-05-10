@@ -28,7 +28,7 @@ title: Home Page
 		</div>
 		<div class="row-fluid">
 			<div class="span6">
-				<p><em>Recent blog posts:</em></p>
+				<p><em>Recent posts:</em></p>
 				{% for post in site.posts limit:5%}
 				<h4><a href='{{post.url}}'>{{ post.title }}</a> <br/><small>{{ post.date | date: "%d %B %Y" }} <span style="color:black">in</span> <b>{{ post.category }}</b></small></h4>
 				<hr/>

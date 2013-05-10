@@ -27,6 +27,16 @@
 	<div class="span4"><p><img alt="LinkedIn logo" src="/img/linkedin.png"/> <a href="http://www.linkedin.com/profile/view?id=208148414">LinkedIn</a></p></div>
 	<div class="span4"><p><img alt="Rss logo" src="/img/rss.png"/> <a href="http://www.claudiodangelis.com/feed.xml">RSS Feed</a></p></div>
 </div>
+<hr/>
+<!-- Latest posts -->
+<p><em>Recent posts:</em></p>
+<ul>
+{% for post in site.posts limit:5%}
+    <li class="sidebar_link"><a href='{{post.url}}'>{{ post.title }}</a></li>
+{% endfor %}
+</ul>
+<hr/>
+
 <div class="centered">
 <script type="text/javascript"><!--
 google_ad_client = "ca-pub-2659172953949717";

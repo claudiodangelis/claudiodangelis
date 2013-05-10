@@ -97,6 +97,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po
 {% include sidebar.html %}
         <div class="main_content">
           {% if page.title != 'Home Page' and page.title != 'Blog' and page.title != 'About me' and page.title != 'Projects'  %}
+          <div id="article_content">
           <h1>{{ page.title }}<br/>
           <small>
           {{ page.date | date: "%d %B %Y" }}
@@ -104,6 +105,9 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po
           </h1>
           {% endif %}
           {{ content }}
+          {% if page.title != 'Home Page' and page.title != 'Blog' and page.title != 'About me' and page.title != 'Projects'  %}
+          </div>
+          {% endif %}
           {% if page.title != 'Home Page' and page.title != 'Blog' and page.title != 'About me' and page.title != 'Projects' %}
           <div class='container-fluid'>
             <div class="row-fluid">
@@ -153,7 +157,8 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po
   <br/>
   <b>credits</b>: improved UX through <a href="http://twitter.github.com/bootstrap/">Bootstrap</a> and <a href="http://http://jquery.com/">jQuery</a> frameworks, code snippets are parsed with <a href="http://code.google.com/p/google-code-prettify/">Google Code Prettify</a>, all logos and trademarks in this site are <strong>property of their respective owners</strong>.
   <br/>
-  This site is built with <a href="https://github.com/mojombo/jekyll">Jekyll</a> and it is <b>open source</b>, just like all softwares should be. Source code at <a href="https://github.com/claudiodangelis/claudiodangelis">GitHub</a>.
+  This site is built with <a href="https://github.com/mojombo/jekyll">Jekyll</a> and it is <b>open source</b>, just like all softwares should be. Source code at <a href="https://github.com/claudiodangelis/claudiodangelis">GitHub</a>.<br/>
+  If you see something wrong or have a suggestion, feel free to file an <a href="https://github.com/claudiodangelis/claudiodangelis/issues">issue</a>.
 </footer>
   <script>
     (function(d, t) {
