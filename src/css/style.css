@@ -107,11 +107,17 @@ a.tagLink{
 .share_button {
   padding: 5px 10px;
   margin: 0 0 10px 0;
+  max-width: 700px;
+  margin: auto;
+  font-size: 1.12345em;
+  line-height: 1.5345em;
+  margin-top: 0.90909em;
+  margin-bottom: 0.90909em;
 }
 
 .plusbutton{
-        display:inline;
-        margin-left:4px;
+  display:inline;
+  margin-left:4px;
 }
 
 /* this overrides 90px to 72px width to +1 button 
@@ -121,13 +127,13 @@ a.tagLink{
 */
 
 .twitterbutton{
-        display:inline;
-        margin-left:2px;
+  display:inline;
+  margin-left:2px;
 }
 
 .fb-like {
   display:inline;
-        margin-left:2px;
+  margin-left:2px;
 }
 
 .fb-like span iframe {
@@ -136,7 +142,7 @@ a.tagLink{
 
 .linkedinbutton{
   display:inline;
-        margin-left:2px;
+  margin-left:2px;
 }
 
 /*bootstrap tuning*/
