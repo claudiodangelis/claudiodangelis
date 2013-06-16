@@ -13,19 +13,6 @@ title: Home Page
 	    {% endfor %}
 	    <hr/>
 	    <!-- end preview-->
-	    <div class='centered'>
-	    	<script type="text/javascript"><!--
-			google_ad_client = "ca-pub-2659172953949717";
-			/* homepage3 */
-			google_ad_slot = "6325600485";
-			google_ad_width = 468;
-			google_ad_height = 60;
-			//-->
-			</script>
-			<script type="text/javascript"
-			src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-			</script>
-		</div>
 		<div class="row-fluid">
 			<div class="span6">
 				<p><em>Recent posts:</em></p>
