@@ -5,10 +5,10 @@ lang: en
 category: linux
 ---
 
-I have a Raspberry Pi board and some days ago I decided to use it as a sort of print server at home, excited about the idea of being able to plug the RasPi's power supply then turn the printer on and wirelessly send it documents from my laptop(s).
-
+I have a Raspberry Pi board and some days ago I decided to use it as a sort of print server at home, excited about the idea of being able to plug the RasPi's power supply then turn the printer on and wirelessly send it documents from my laptop(s).  
 While getting ready to put my hands on it and set up the server, a problem showed up:
 once the print is done, I'd probably want to turn off the printer, turn off the RasPi and possibly unplug power supply; it's a _headless_ system, so I would connect over SSH and run the proper command to shutdown the RasPi, but what about my mother?  
+
 I mean, she's clearly not a UNIX geek.
 Without a power button or a point-and-click graphical interface she wouldn't be able to properly shutdown the RasPi, so she would probably **unplug the power supply**, and we all know how bad is this practice.
 
@@ -17,6 +17,7 @@ Without a power button or a point-and-click graphical interface she wouldn't be 
 I had to find a way to communicate with the Raspberry Pi from the _real, physycal, tangible,_ world.
 
 I know that for 15&#36; one can have a USB power button, but that  just didn't  sound like the kind of solution I was looking for.
+
 
 After some thinking I figured it out: [udev](http://linux.die.net/man/8/udev).  
 From Wikipedia:

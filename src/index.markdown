@@ -4,14 +4,16 @@ title: Home Page
 ---
 <div id="desktopHome" class="hidden-phone">
 	<div class="">
-		<p><em>Latest blog post:</em></p>
 		<!-- begin preview -->
-		{% for post in site.posts limit:1 %}
-		<h3>{{ post.title }}</h3>
-			{{ post.content | more: "excerpt" }}
-	    <div class="lead"><a href="{{ post.url }}">Continue reading...</a></div>
-	    {% endfor %}
-	    <hr/>
+			<p><em>Latest blog post:</em></p>
+			{% for post in site.posts limit:1 %}
+		<div id="article_content">
+			<h3>{{ post.title }}</h3>
+				{{ post.excerpt }}
+	    	<div class="lead"><a href="{{ post.url }}">Continue reading...</a></div>
+	    	{% endfor %}
+	    	<hr/>
+		</div>
 	    <!-- end preview-->
 		<div class="row-fluid">
 			<div class="span6">

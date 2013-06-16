@@ -10,8 +10,6 @@ category: osx
  Copy/paste lines below and put in your password when prompted to disable OS X startup chime.
 
 
-<!--more-->
-
 
 	sudo sh -c "echo '#'"'!'"'/bin/sh\nosascript -e \"set volume without output muted\"'>/usr/local/bin/unmute"
 	sudo sh -c "echo '#'"'!'"'/bin/sh\nosascript -e \"set volume with output muted\"'>/usr/local/bin/mute"

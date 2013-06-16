@@ -10,8 +10,6 @@ category: osx
 <p>This post will guide you through a quick setup of a MAMP server on Mac OS X (do not confuse with <strong>MAMP.app</strong> application). Definition of MAMP from wikipedia:</p>
 <p><em>Acronym MAMP refers to a set of free software programs commonly used together to run dynamic web sites on servers running the Apple Macintosh operating system, Mac OS X</em></p>
 
-<!--more-->
-
 <ul>
 <li>Mac OS X, the operating system;</li>
 <li>Apache, the Web server;</li>
@@ -19,6 +17,7 @@ category: osx
 <li>P for PHP, Perl, or Python, all programming languages used for web development.</li>
 </ul>
 
+<!--more-->
 
 <div id="apache">
 <h2>Apache</h2>

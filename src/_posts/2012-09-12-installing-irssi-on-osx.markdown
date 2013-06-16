@@ -21,7 +21,7 @@ _WARNING: tested on OSX 10.8.2 only_
 Build and install packages with `./configure`, `make && sudo make install`, no particular flags required.
 
 
-<!--more-->
+{{ post.excerpt_separator }}
 
 
 ## Possible errors

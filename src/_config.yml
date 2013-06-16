@@ -8,4 +8,4 @@ source: .
 destination: /var/www/html
 permalink: /:year/:title/
 markdown: kramdown
-
+excerpt_separator: "<!--more-->"

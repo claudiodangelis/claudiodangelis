@@ -12,11 +12,10 @@ We have a couple of ways to manage application's dependencies with **pub**, we c
 
 Just to be clear, **hosted** packages are not hosted on a _general_ server, they are hosted on a **pub** server; since setting up our own _local_ **pub** server or taking advantage of **pub-cache** could be really tricky, a safe and fast way to import local packages is doing it via the **git** system.
 
-
+<!--more-->
 
 Let's see how to create an application, **my_app**, that imports a local library, **my_lib**.
 
-<!--more-->
 
 
 Assume that **my_lib** and **my_app** folders are in user's home directory, e.g.

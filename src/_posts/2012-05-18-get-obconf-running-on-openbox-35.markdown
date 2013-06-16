@@ -11,7 +11,6 @@ category: linux
 
 <p>Let's see how to get it working:</p>
 
-<!--more-->
 
 
 <ol>
