@@ -5,7 +5,7 @@ lang: en
 category: web
 ---
 
-I've been using **Jekyll** al lot lately, I'm totally in love with it, it's a simple,
+I've been using **Jekyll** a lot lately, I'm totally in love with it, it's a simple,
 fast and brilliant Ruby tool to generate static websites and blogs. Well,
 this post is not really about Jekyll _per se_, it's more likely about the way I use it inside my 
 _ecosystem_.  
