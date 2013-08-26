@@ -1,0 +1,213 @@
+<!--
+Google IO 2012/2013 HTML5 Slide Template
+
+Authors: Eric Bidelman <ebidel@gmail.com>
+         Luke Mahé <lukem@google.com>
+
+URL: https://code.google.com/p/io-2012-slides
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <!--This one seems to work all the time, but really small on ipad-->
+  <!--<meta name="viewport" content="initial-scale=0.4">-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" media="all" href="theme/css/default.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+  <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+</head>
+<body style="opacity: 0">
+
+<slides class="layout-widescreen">
+
+  <slide class="logoslide nobackground">
+    <article class="flexbox vcenter">
+      <span><img src="images/google_developers_logo.png"></span>
+    </article>
+  </slide>
+
+  <slide class="title-slide segue nobackground">
+    <aside class="gdbar"><img src="images/google_developers_icon_128.png"></aside>
+    <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+    <hgroup class="auto-fadein">
+      <h1 data-config-title><!-- populated from slide_config.json --></h1>
+      <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+      <p data-config-presenter><!-- populated from slide_config.json --></p>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Contenuti</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Manipolazione del <b>DOM</b></li>
+        <li>Interazione <b>client-server</b></li>
+        <li><b>Web Sockets</b></li>
+      </ul>
+      <p>Repository su GitHub: <a href="https://github.com/gdl-italia/dart_OXO">https://github.com/gdl-italia/dart_OXO</a></p>
+    </article>
+  </slide>
+
+  <slide>
+    <h2>Dart OXO</h2>
+    <h3>Implementazione in Dart del gioco del tris</h3>
+    <article style="text-align:center">
+      <img src="images/oxo.png"  alt="Description" title="Description"/>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Struttura</h2>
+    </hgroup>
+    <article>
+      <ul><b>Client</b>
+        <li>Interfaccia grafica</li>
+      </ul>
+      <ul><b>Server</b>
+        <li>Gestione giocatori connessi e stato del gioco</li>
+        <li>Sincronizzazione stato del gioco fra i due client</li>
+        <li>Calcolo mossa vincente</li>
+      </ul>
+    </article>
+  </slide>
+
+<!--   <slide>
+    <hgroup>
+      <h2>Server HTTP</h2>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="dart">
+. . .
+
+HttpServer.bind("0.0.0.0", port).then((HttpServer server) {
+  print("Server is running —> http://localhost:${port}");
+  var sc = new StreamController();
+  sc.stream.transform(new WebSocketTransformer()).listen(gameHandler.onConnection);
+  server.listen((HttpRequest request) {
+    if(request.uri.path == "/ws") {
+      // Redirecting request to websocket handler
+      sc.add(request);
+    } else {
+      defaultRequestHandler(request);
+    }
+  });
+});
+
+. . .
+      </pre>
+    </article>
+  </slide> -->
+
+  <slide>
+    <hgroup>
+      <h2>Web Sockets</h2>
+      <h3>Formato dei messaggi</h3>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="json">
+{
+  "cmd" : "comando",
+  "arg" : {
+      "arg1" : "foo",
+      "arg2" : "bar"
+  }
+}
+      </pre>
+      <pre class="prettyprint" data-lang="dart">
+JSON.stringify({"cmd":"comando","arg":{"arg1":"foo","arg2":"bar"}});
+      </pre>
+    </article>
+  </slide>
+  <slide>
+    <hgroup><h2>Web Sockets</h2></hgroup>
+    <article>
+      <p>Connessione ed invio messaggi</p>
+      <pre class="prettyprint" data-lang="dart">
+WebSocket ws = new WebSocket("ws://" + window.location.host + "/ws");
+. . .
+ws.send(JSON.stringify({"cmd":"comando","arg":{"arg1":"foo","arg2":"bar"}}));
+      </pre>
+      <p>Ricezione di un messaggio</p>
+      <pre class="prettyprint" data-lang="dart">
+ws.onMessage.listen((e){
+  Map dataFromServer = JSON.parse(e.data);
+  . . .
+  switch(dataFromServer["cmd"]) {
+    . . .
+  }
+});
+      </pre>
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>Web Sockets</h2>
+      <h3>Login dei giocatori, invio di una mossa</h3>
+    </hgroup>
+    <article>
+      <img src="images/slides1.png">
+      <img src="images/slides2.png">
+    </article>
+  </slide>
+  <slide>
+  <hgroup>
+    <h2>Rappresentazione della griglia</h2>
+  </hgroup>
+  <article>
+    <img src="images/slides3.png">
+    <pre class="prettyprint" data-lang="dart">
+List&lt;int&gt; grid = [0,0,0,0,0,0,0,0,0]; // Indici: 0,1,2,3,4,5,6,7,8
+    </pre>
+  </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Determinare la mossa vincente</h2>
+    </hgroup>
+    <img src="images/slides4.png">
+    <img src="images/slides5.png">
+  </slide>
+
+  <slide>
+    <hgroup><h2>Dart OXO</h2><h3>Codice sorgente</h3></hgroup>
+    <article>
+      <p>Repository su GitHub: <a href="https://github.com/gdl-italia/dart_OXO">https://github.com/gdl-italia/dart_OXO</a></p>
+
+    </article>
+  </slide>
+
+
+  <slide class="backdrop"></slide>
+
+</slides>
+
+<script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-XXXXXXXX-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+<!--[if IE]>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body>
+</html>

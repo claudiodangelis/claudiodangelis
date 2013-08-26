@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Play poker with Dart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="components/bootstrap/css/bootstrap.min.css" media="screen"/>
+    <link rel="stylesheet" href="style.css" media="screen"/>
+  </head>
+  <body>
+
+  <div class="container">
+  <h1>Let's play some poker!</h1>
+  <div class="row">
+    <div class="well span6">
+	    <div class="row">
+				<div id="c1" class="card span2"></div>
+				<div id="c2" class="card span2"></div>
+				<div id="c3" class="card span2"></div>
+				<div id="c4" class="card span2"></div>
+				<div id="c5" class="card span2"></div>
+	    </div>
+    </div>
+    <div class="span5">
+      <p><a href="https://github.com/claudiodangelis/dart-playpoker">Code at github.com</a></p>
+      <p><a href="http://www.claudiodangelis.com/projects/dart-playpoker">Project page</a></p>
+    </div>
+    </div>
+    <div class="row">
+      <div class="well span6">
+	      <div class="row">
+	        <div id="h1" class="card span2"></div>
+	        <div id="h2" class="card span2"></div>
+	        <div id="h3" class="card span2"></div>
+	        <div id="h4" class="card span2"></div>
+	        <div id="h5" class="card span2"></div>
+        </div>
+      </div>
+
+    </div>
+
+  <div class="row-fluid">
+    <div id="status" class="alert alert-info"></div>
+  </div>
+
+  <button id="newHand" class="btn">New Hand</button>
+  <button id="showdown" class="btn btn-info">Showdown</button>
+
+  </div>
+  </body>
+  <script type="text/javascript" type="components/bootstrap/js/bootstrap.min.js"></script>
+  <script type="application/dart" src="playpoker.dart"></script>
+  <script src="packages/browser/dart.js"></script>
+</html>

@@ -1,0 +1,13 @@
+---
+layout: none
+permalink: .htaccess
+---
+
+Options -Indexes
+
+<IfModule mod_alias.c>
+    Redirect permanent /@  https://twitter.com/daw05
+    Redirect permanent /~  https://github.com/claudiodangelis
+    Redirect permanent /+  https://plus.google.com/115859961800127275872
+    Redirect permanent /in https://linkedin.com/in/claudiodangelis
+</IfModule>

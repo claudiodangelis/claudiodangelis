@@ -1,0 +1,11 @@
+name: Claudio Dawson d'Angelis Home Page
+description: Posts about computers and stuff
+url: http://www.claudiodangelis.com
+version: 5.4
+safe: false
+port: 4000
+source: .
+destination: /var/www/html
+permalink: /:year/:title/
+markdown: kramdown
+excerpt_separator: "<!--more-->"

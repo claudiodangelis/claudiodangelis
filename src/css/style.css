@@ -1,0 +1,199 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+html {
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+code {
+    background: #2d2d2d;
+    font-family: Menlo, "Bitstream Vera Sans Mono", "DejaVu Sans Mono", Monaco, Consolas, monospace;
+    font-size: 12px;
+    line-height: 1.5;
+    border: 1px solid #cccccc;
+    color: white;
+}
+
+@media (max-width: 979px) {
+    #globalSidebar {
+        visibility: hidden;
+        display: none;
+    }
+
+    .sidebar-nav{
+        visibility: hidden;
+        display: none;
+    }
+
+    .bottomAd{
+        visibility: hidden;
+        display: none;
+    }
+
+    .sidebar{
+        visibility: hidden;
+        display: none;
+    }
+
+    #sidebar_background {
+        visibility: hidden;
+        display: none;
+    }
+
+    .main_content{
+        width: 100%;
+    }
+
+    footer{
+        width: 95%;
+    }
+}
+
+footer {
+    padding-bottom: 50px;
+    margin-right: 350px;
+}
+
+a.tagLink{
+    font-weight: normal;
+    color: white;
+}
+
+.clear {
+    clear: both;
+}
+
+
+.centered {
+    text-align: center;
+}
+
+.btn-img{
+    width: 15px
+}
+
+/* SOCIAL BUTTONS */
+.share_button {
+    padding: 5px 10px;
+    margin: 0 0 10px 0;
+    max-width: 700px;
+    margin: auto;
+    font-size: 1.12345em;
+    line-height: 1.5345em;
+    margin-top: 0.90909em;
+    margin-bottom: 0.90909em;
+}
+
+.plusbutton{
+    display:inline;
+    margin-left:4px;
+}
+
+/* this overrides 90px to 72px width to +1 button 
+.plusbutton div {
+width:70px !important;
+}
+*/
+
+.twitterbutton{
+    display:inline;
+    margin-left:2px;
+}
+
+.fb-like {
+    display:inline;
+    margin-left:2px;
+}
+
+.fb-like span iframe {
+    margin-top:-4px;
+}
+
+.linkedinbutton{
+    display:inline;
+    margin-left:2px;
+}
+
+/*bootstrap tuning*/
+
+.carousel-img{
+    display: block;
+    margin: 0 auto;
+    line-height: 1;
+}
+
+.screenshot{
+    width:500px;
+}
+
+#cane{
+    position: relative;
+    margin-bottom: -5px;
+    margin-top: -10px;
+}
+
+
+#projects{
+    border-left:2px solid #F7F7F9;
+padding:15px;
+}
+
+.socialicon{
+    width:30px;
+}
+
+.sidebar {
+    padding: 20px;
+    width: 300px;
+    float: right;
+    margin-top: -20px;
+    margin-right: -20px; 
+}
+
+#sidebar_background {
+    position:fixed;
+    top:0;
+    right:0;
+    width: 330px;
+    height: 100%;
+    background-color: #F7F7F9;
+    z-index: -1;
+}
+
+.main_content{
+    width: auto;
+    overflow: hidden;
+}
+
+#main_container{
+    height: auto;
+    overflow: hidden;
+}
+
+.blog_entry{
+    padding-left: 10px;
+}
+
+.sidebar_link {
+    font-size: small;
+}
+
+#article_content {
+    max-width: 700px;
+    margin: auto;
+    font-size: 1.12345em;
+    line-height: 1.5345em;
+    margin-top: 0.90909em;
+    margin-bottom: 0.90909em;
+}
+
+#contacts {
+    background-color: white;
+    padding:3px;
+    padding-top:10px;
+    margin-bottom:10px;
+}
