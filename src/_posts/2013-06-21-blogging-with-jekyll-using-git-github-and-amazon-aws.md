@@ -137,7 +137,6 @@ clone the remote repository.
     ![Screenshot](/assets/img/posts/github-create-new-repository.png)
 
 
-
 5. Now we need to add the github repository as remote origin of our local repository:
 
         # you're on your local machine

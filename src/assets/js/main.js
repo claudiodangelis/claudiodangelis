@@ -1,4 +1,11 @@
 $(window).load(function() {
+    
+    var imgs = document.getElementsByTagName("img");
+    for (var i = 0; i < imgs.length; i++) {
+        if (imgs[i].id != "avatar") {
+            imgs[i].className += " img-responsive";
+        }
+    }
 
     $(document).keyup(function(e) {
         var url;

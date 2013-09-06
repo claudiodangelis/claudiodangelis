@@ -23,8 +23,9 @@ mentre qui trovate le [slides utilizzate](http://claudiodangelis.com/slides/gdl-
 
 Questo episodio fa parte del programma **GDL Italia** che potete seguire sul blog ufficiale [Developers Italia](http://developersitalia.blogspot.it/) curato da [+Alfredo Morresi](https://plus.google.com/+AlfredoMorresi/posts).
 
-
-<iframe width="560" height="315" src="//www.youtube.com/embed/LZXSZ1feQqc" frameborder="0" allowfullscreen></iframe>
+<div class="video-container">
+    <iframe width="560" height="315" src="//www.youtube.com/embed/LZXSZ1feQqc" frameborder="0" allowfullscreen></iframe>
+</div>
 
 
 <!--more-->
