@@ -26,7 +26,7 @@ both to AWS and Github, then a _post-receive_
 [hook script](http://git-scm.com/book/en/Customizing-Git-Git-Hooks) on the server
 builds and publishes the Jekyll blog. 
 
-![Screenshot](/img/posts/jekyll-aws.png)
+![Screenshot](/assets/img/posts/jekyll-aws.png)
 
 
 In order to obtain such workflow, we have to:
@@ -134,7 +134,7 @@ clone the remote repository.
 4. Create a new repository on github, and be sure to **leave unchecked** the
 "Initialize this repository with a README" flag.
 
-    ![Screenshot](/img/posts/github-create-new-repository.png)
+    ![Screenshot](/assets/img/posts/github-create-new-repository.png)
 
 
 
@@ -175,8 +175,8 @@ If everything's gone fine, you should see an output like this:
     Total 19 (delta 13), reused 0 (delta 0)
     . . .
     remote:  15 files changed, 151 insertions(+), 0 deletions(-)
-    remote:  create mode 100644 src/img/posts/github-create-new-repository.png
-    remote:  create mode 100644 src/img/posts/jekyll-aws.png
+    remote:  create mode 100644 src/assets/img/posts/github-create-new-repository.png
+    remote:  create mode 100644 src/assets/img/posts/jekyll-aws.png
     remote: Configuration file: /home/ec2-user/mysite/src/_config.yml
     remote:             Source: .
     remote:        Destination: /var/www/html

@@ -1,0 +1,45 @@
+---
+layout: default
+title: Homepage
+---
+
+{% for post in paginator.posts%}
+<h1>{{ post.title }}</h1>
+<p><em><small>Published {{ post.date | date: "%B %d, %Y" }}</small></em></p>
+{{ post.excerpt }}
+<p><a href="{{ post.url }}"><span class="glyphicon glyphicon-log-in"></span>&nbsp; Read more</a></p>
+{% endfor %}
+
+<ul class="pagination">
+
+    {% if paginator.page != 1 %}
+        {% if paginator.previous_page == 1 %}
+        <li><a href="/">&laquo; prev</a></li>
+        {% else %}
+        <li><a href="/page{{ paginator.previous_page }}">&laquo; prev</a></li>
+        {%  endif%}
+    {% else %}
+    <li class="disabled"><a>&laquo; prev</a></li>
+    {% endif %}
+
+    {% if paginator.page == 1 %}
+    <li class="active"><a href="/">1</a></li>
+    {% else %}
+    <li><a href="/">1</a></li>
+    {% endif %}
+
+
+    {% for count in (2..paginator.total_pages) %}
+        {% if count == paginator.page %}
+        <li class="active"><a href="/page{{count}}">{{ count }}</a></li>
+        {% else %}
+        <li><a href="/page{{count}}">{{ count }}</a></li>
+        {% endif %}
+    {% endfor %}
+
+    {% if paginator.page == paginator.total_pages %}
+    <li class="disabled"><a>next &raquo;</a></li>
+    {% else %}
+    <li><a href="/page{{ paginator.next_page }}">next &raquo;</a></li>
+    {% endif %}
+</ul>

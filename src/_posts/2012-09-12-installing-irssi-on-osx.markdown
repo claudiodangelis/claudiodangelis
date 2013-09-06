@@ -5,7 +5,7 @@ lang: en
 category: osx
 ---
 
-![Screenshot](/img/posts/screenshot_irssi.png)
+![Screenshot](/assets/img/posts/screenshot_irssi.png)
 
 _WARNING: tested on OSX 10.8.2 only_
 
@@ -21,7 +21,7 @@ _WARNING: tested on OSX 10.8.2 only_
 Build and install packages with `./configure`, `make && sudo make install`, no particular flags required.
 
 
-{{ post.excerpt_separator }}
+<!--more-->
 
 
 ## Possible errors

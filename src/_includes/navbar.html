@@ -1,0 +1,45 @@
+<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+  <div class="container">
+    <div class="row">
+      <div class="navbar-header col-md-1 col-md-offset-2" >
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="navbar-collapse collapse ">
+        <ul class="nav navbar-nav ">
+
+          {% if page.path == 'index.html' or page.url contains '/page' or page.url contains '/20' %}
+          <li class="active"><a href="/">blog</a></li>
+          {% else %}
+          <li><a href="/">blog</a></li>
+          {% endif %}
+          
+          {% if page.url contains '/projects' %}
+          <li class="active"><a href="/projects">projects</a></li>
+          {% else %}
+          <li><a href="/projects">projects</a></li>
+          {% endif %}
+
+
+          {% if page.url contains '/about' %}
+          <li class="active"><a href="/about">about</a></li>
+          {% else %}
+          <li><a href="/about">about</a></li>
+          {% endif %}
+
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          {% if page.url == '/archive.html' %}
+          <li class="active"><a href="/archive.html">full blog archive</a></li>
+          {% else %}
+          <li><a href="/archive.html">full blog archive</a></li>
+          {% endif %}
+
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+</nav>

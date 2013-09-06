@@ -1,0 +1,41 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+#content {
+    max-width: 700px;
+    margin: auto;
+    font-size: 1.32em;
+    line-height: 1.4345em;
+}
+
+#sidebar {
+    text-align: right;
+}
+
+
+p + p {
+    margin-bottom: 1.4em;
+}
+
+footer {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: small;
+}
+
+#share {
+    margin-top:20px;
+    margin-bottom: 20px;
+}
+
+.btn-img {
+    width: 15px;
+}
+
+.shortcut-key {
+    display: inline-block;
+    width: 50px;
+    font-weight: bold;
+}

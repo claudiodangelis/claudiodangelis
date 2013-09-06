@@ -1,144 +1,65 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-    <title>{{ page.title }} | Claudio Dawson d'Angelis Homepage</title>
-<meta charset='utf-8'> 
-<style type="text/css">
-    body {
-      padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
-    }
-    .sidebar-nav {
-      padding: 9px 0;
-    }
-</style>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="/feed.xml" rel="alternate" title="ATOM" type="application/atom+xml" />
-<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap.min.css" rel="stylesheet">
-<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-responsive.min.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="/js/google-code-prettify/prettify.css">
-<link rel="stylesheet" type="text/css" href="/css/style.css">
-<!--<link rel="stylesheet/less" type="text/css" href="/less/responsive.less">-->
-<link rel="icon" type="image/png" href="/img/favicon.ico">
-<script type="text/javascript">
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-31479865-1']);
-        _gaq.push(['_trackPageview']);
-        (function() {
-          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-      </script>
-      <script type="text/javascript">
-(function() {
-var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-po.src = 'https://apis.google.com/js/plusone.js';
-var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-})();
-</script>
-<script type="text/javascript">
-(function() {
-var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-po.src = 'https://apis.google.com/js/plusone.js';
-var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-})();
-</script>
+    <title>{{ page.title }} | Claudio d'Angelis</title>
+    <meta charset='utf-8'> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/assets/img/favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/syntax.css">
+    <link href="/feed.xml" rel="alternate" title="ATOM" type="application/atom+xml" />
+    {% include analytics.html %}
 </head>
-<body onload="init(); prettyPrint(); loadShareButtons() ">
-  <div class="navbar navbar-fixed-top  navbar-inverse">
-    <div class="navbar-inner ">
-      <div class="container-fluid">
-        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </a>
-        <a class="brand" href="/"><img src="/img/cane.png" alt="cane" id="cane"/> claudiodangelis.com </a>
-        <div class="nav-collapse">
-          <ul class="nav">
-            <li  id="blog-nav"><a href="/blog">blog</a></li>
-            <li id="projects-nav" class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">projects<b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="/projects">All projects</a></li>
-                <li class="divider"></li>
-
-                {% for project in site.pages %}
-                                {% if project.url contains '/projects' %}
-                {% if project.title != 'Projects' %}
-                                <li><a href="/projects/{{ project.path }}">{{ project.title }}</a></li>
-                {% endif %}
-                {% endif %}
-                                {% endfor %}
-              </ul>
-            </li>
-            <li><a href="/about">about me</a></li>
-            <li class="pull-right"><a href="http://www.claudiodangelis.com/feed.xml"><img alt="Rss logo" src="/img/rss.png"/></a></li>
-            <!-- Place this tag where you want the +1 button to render. -->
-            <li style="margin-top:10px"><div class="g-plusone" data-size="tall" data-annotation="inline" data-width="300"></div></li>
-
-            <!-- Place this tag after the last +1 button tag. -->
-            <script type="text/javascript">
-              (function() {
-                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-                po.src = 'https://apis.google.com/js/plusone.js';
-                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-              })();
-            </script>
-            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </div>
-  </div>
-<div class="container-fluid">
-  <div class="row-fluid">
-    <div class="row-fluid">
-      <div id="main_container" class="row-fluid">
-        <div id="sidebar_background"></div>
-{% include sidebar.html %}
-        <div class="main_content">
-          {% if page.title != 'Home Page' and page.title != 'Blog' and page.title != 'About me' and page.title != 'Projects'  %}
-          <div id="article_content">
-          <h1>{{ page.title }}<br/>
-          <small>
-          {{ page.date | date: "%B %d, %Y" }} under <a href="/blog/{{page.category}}">{{page.category}}</a>
-          </small>
-          </h1>
-          {% endif %}
-          {{ content }}
-          {% if page.title != 'Home Page' and page.title != 'Blog' and page.title != 'About me' and page.title != 'Projects'  %}
-          </div>
-          {% endif %}
-          {% if page.title != 'Home Page' and page.title != 'Blog' and page.title != 'About me' and page.title != 'Projects' %}
-          <div class='container-fluid'>
-            <div class="row-fluid">
-              <div class="share_button">
-                {% include addthis.html %}
-              </div>
-            <p>&nbsp;</p>
-              </div>
-              {% include disqus.html %}
+<body>
+    {% include navbar.html %}
+    <div class="container">
+        <div class="row">
+            <div id="sidebar" class="col-md-3">
+                {% include sidebar.html %}
             </div>
-            {%  include recent.html %}
+            <div id="content" class="col-md-9">
+                {% unless page.path == 'index.html' or page.url contains '/page' and page.url != '/projects/' %}
+                <h1>{{ page.title }}</h1>
+                {% if page.id %}
+                <p><em><small>Published {{ page.date | date: "%B %d, %Y" }}</small></em></p>
+                {% endif %}
+                {% endunless %}
 
-          {% endif %}
+                {{ content }}
+
+                {% if page.id %}
+                {% include share.html %}
+                {% include disqus.html %}
+                {% include prevnext.html %}
+                {% endif %}
+                
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-</div>
-<footer class="container-fluid centered">
-  <hr/>
-  &copy; 2007-2013 This is the homepage of <a href="/about">Claudio &quot;Dawson&quot; d'Angelis</a>, all of the stuff you find on this website is licensed under <a rel="license" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License V2.</a> (code) and <a href="http://creativecommons.org/licenses/by/3.0/legalcode">CC BY-SA 3.0 License</a> (blog posts).
-  <br/>
-  <b>credits</b>: improved UX through <a href="http://twitter.github.com/bootstrap/">Bootstrap</a> and <a href="http://jquery.com/">jQuery</a> frameworks, code snippets are parsed with <a href="http://code.google.com/p/google-code-prettify/">Google Code Prettify</a>, all logos and trademarks in this site are <strong>property of their respective owners</strong>.
-  <br/>
-  This site is built with <a href="https://github.com/mojombo/jekyll">Jekyll</a> and it is <b>open source</b>, just like all softwares should be. Source code at <a href="https://github.com/claudiodangelis/claudiodangelis">GitHub</a>.<br/>
-  If you see something wrong or have a suggestion, feel free to file an <a href="https://github.com/claudiodangelis/claudiodangelis/issues">issue</a>.
-</footer>
+    <!-- shortcuts' modal -->
+    <div class="modal fade" id="shortcuts" tabindex="-1" role="dialog" aria-labelledby="Shortcuts" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Keyboard shortcuts</h4>
+                </div>
+                <div class="modal-body">
+                    <p><span class="shortcut-key">b</span> go to <b>blog</b></p>
+                    <p><span class="shortcut-key">p</span> go to <b>projects</b></p>
+                    <p><span class="shortcut-key">a</span> go to <b>about me</b></p>
+                    <p><span class="shortcut-key">f</span> go to <b>full blog archive</b></p>
+                    <hr/>
+                    <p><span class="shortcut-key">?</span> open this modal</p>
+                    <p><span class="shortcut-key">ESC</span> close this modal</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include footer.html %}
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/assets/js/main.js"></script>
 </body>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-<script type="text/javascript" src="/js/google-code-prettify/prettify.js"></script>
-<script src="/bootstrap/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="/js/fn.js"></script>
 </html>

@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-md-6">
+
+        {% if page.previous %}
+        <p><b>Previous post</b></p>
+        <p>
+            <a href="{{ page.previous.url }}">{{ page.previous.title }}</a><br/>
+            <em>{{ page.previous.description }}</em>
+        </p>
+        {% endif %}
+
+    </div>
+    <div class="col-md-6">
+        {% if page.next %}
+
+        <p><b>Next post</b></p>
+        <p>
+            <a href="{{ page.next.url }}">{{ page.next.title }}</a><br/>
+            <em>{{ page.next.description }}</em>
+        </p>
+        {% endif %}
+    </div>
+</div>

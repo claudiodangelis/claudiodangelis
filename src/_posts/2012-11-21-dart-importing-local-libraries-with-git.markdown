@@ -39,23 +39,30 @@ Here's the directory tree of ***my_lib**:
 
 Content of **my_lib.dart**:
 
-	library my_lib;
+{% highlight dart %}
+library my_lib;
 
-	String hello(String name){
-	  return 'Hello $name !';
-	}
+String hello(String name){
+  return 'Hello $name !';
+}
+{% endhighlight %}
+
 
 Content of **pubspec.yaml**:
 
-	name: my_lib
+{% highlight yaml %}
+name: my_lib
+{% endhighlight %}
 
 
 Now we have to "convert" **my_lib** into a git repository; change to **my_lib** and type:
 
-	git init
-	git add lib/my_lib.dart
-	git add pubspec.yaml
-	git commit -m "Random message"
+{% highlight sh%}
+git init
+git add lib/my_lib.dart
+git add pubspec.yaml
+git commit -m "Random message"
+{% endhighlight %}
 
 We're done with _my_lib_, let's switch to _my_app_
 
@@ -70,36 +77,40 @@ We're done with _my_lib_, let's switch to _my_app_
 4. Create **pubspec.yaml** at the top of **my_app** folder
 
 Content of **my_app.dart**:
+{% highlight dart %}
+import 'package:my_lib/my_lib.dart';
 
-	import 'package:my_lib/my_lib.dart';
-
-	main(){
-	  print(hello('darling'));
-	}
-
+main(){
+  print(hello('darling'));
+}
+{% endhighlight %}
 And now set content of **pubspec.yaml** to:
 
-	name: My Application
-	dependencies:
-	  my_lib:
-	    git: file:///home/bob/my_lib
+{% highlight yaml %}
+name: My Application
+dependencies:
+  my_lib:
+    git: file:///home/bob/my_lib
+{% endhighlight %}
 
 > Remember to change **git:** argument accordingly to current operating system
 
 We're almost done. Last step is running `pub install` in **my_app** folder.
 Output should return:
 
-	$ pub install
-	Resolving dependencies...
-	Dependencies installed!
+{% highlight sh %}
+$ pub install
+Resolving dependencies...
+Dependencies installed!
+{% endhighlight %}
 
 > Some symlinks, **packages**, have been created in _my_app_ folder
 
 Now we're ready to run our awesome application:
-
-	$ dart bin/my_app.dart 
-	Hello darling !
-
+{% highlight sh %}
+$ dart bin/my_app.dart 
+Hello darling !
+{% endhighlight %}
 
 
 Easy!

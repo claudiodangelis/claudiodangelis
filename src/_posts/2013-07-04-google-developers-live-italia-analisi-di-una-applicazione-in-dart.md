@@ -5,7 +5,7 @@ lang: it
 category: dart
 ---
 
->_Note for non-italian readers: while this video is in Italian, discussed application - a dart implementation of tic-tac-toe -
+>_Note for non-italian readers: while this video is in Italian, discussed application &mdash; a dart implementation of tic-tac-toe &mdash;
 is written and commented in English, you find the source code at [github](https://github.com/gdl-italia/dart_OXO).
 There's a little demo around minute [4:20](http://www.youtube.com/watch?v=LZXSZ1feQqc&t=4m20s)._
 
@@ -26,7 +26,6 @@ Questo episodio fa parte del programma **GDL Italia** che potete seguire sul blo
 
 <iframe width="560" height="315" src="//www.youtube.com/embed/LZXSZ1feQqc" frameborder="0" allowfullscreen></iframe>
 
----
 
 <!--more-->
 

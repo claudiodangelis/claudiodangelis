@@ -22,7 +22,7 @@ category: osx
 <div id="apache">
 <h2>Apache</h2>
 <p>Mac OS X is shipped with a built-in Apache Server, you can easly enable it by checking "Web Sharing" in <strong>System Preferences &gt; Sharing</strong> pane.</p>
-<img  src="/img/posts/preferences_webserver.png" alt="Web Sharing"/>
+<img  src="/assets/img/posts/preferences_webserver.png" alt="Web Sharing"/>
 <p>It shows you also the web address of your local files, both for the current user and computer, clicking the computer's website address (or browsing to <a href="http://localhost">http://localhost</a>) you will see the <code>It Works!</code> message.</p>
 
 <p>Ok, it works, now let's see how to customize webserver, first of all, we need to know which files have to be edited and where we can find them:</p>
@@ -37,9 +37,10 @@ category: osx
 <p>3) <strong>save a copy of original and working configuration files before you edit them</strong></p>
 <br/>
 <p>Let's edit <strong>httpd.conf</strong> with <code>nano</code> text editor</p>
-<pre  class="prettyprint">
+{% highlight sh %}
 sudo nano /etc/apache2/httpd.conf
-</pre>
+{% endhighlight %}
+
 <p>First of all, we want to change the home folder of our files, assuming we want to set it to <code>/Users/myusername/www</code>. In text editor search for the string: <pre class="prettyprint"><code>DocumentRoot "/Library/WebServer/Documents"</code></pre> and replace it with:<pre class="prettyprint"><code>DocumentRoot "/Users/myusername/www"</code></pre>You have also to replace, some line below:<pre class="prettyprint"><code>&lt;Directory &quot;/Library/WebServer/Documents&quot;&gt;</code></pre> with:<pre class="prettyprint"><code>&lt;Directory &quot;/Users/myusername/www&quot;&gt;</code></pre> (<em>&lt;Directory&gt; section contains apache instructions for the given directory</em>: <a href="http://httpd.apache.org/docs/2.0/mod/core.html#directory">Official Apache reference</a>)</p>
 
 <br/>
@@ -142,7 +143,7 @@ rm -rf libpng-1.5.9.tar.gz</code></pre>
 <h2>Test the environment!</h2>
 <p>Ensure mysql server is running (if you installed MySQL.prefPane you can start mysql server from System Preferences &gt; MySQL)</p>
 <p>Launch Sequel Pro and connect to localhost:</p>
-<img  src="/img/posts/screenshot_sequelpro.png" alt="Sequel Pro"/>
+<img  src="/assets/img/posts/screenshot_sequelpro.png" alt="Sequel Pro"/>
 <ul>
 <li>host = localhost
 <li>username = root

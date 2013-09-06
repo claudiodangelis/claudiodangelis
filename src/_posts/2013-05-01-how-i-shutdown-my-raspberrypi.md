@@ -58,8 +58,7 @@ Dependencies:
 
 **Debian and derivatives**
 
-    sudo apt-get install python-gobject python-gudev
-
+sudo apt-get install python-gobject python-gudev
 
 About the installation, since the tool is at a **very early stage**, there's no installer yet so here's the deal:
 

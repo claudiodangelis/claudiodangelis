@@ -1,48 +1,19 @@
-<!-- sidebar-->
-<div class="sidebar">
-
-<div class="row-fluid">
-<!-- Place this tag where you want the badgev2 to render. -->
-<div class="g-person" data-href="//plus.google.com/115859961800127275872" data-layout="landscape" data-rel="author"></div>
-
-<!-- Place this tag after the last badgev2 tag. -->
-<script type="text/javascript">
-  (function() {
-    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-    po.src = 'https://apis.google.com/js/plusone.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-  })();
-</script>
-</div>
-<div class="row-fluid">
-    <p><small><em>Interested in computer programming and progressive rock sounds — <a href="/about">Read more</a></em></small></p>
-</div>
-<div class="row-fluid" id="contacts">
-    <div class="span4"><p><img alt="Github logo" src="/img/github.png"/> <a href="/~">GitHub</a></p></div>
-  <div class="span4"><p><img alt="LinkedIn logo" src="/img/linkedin.png"/> <a href="/in">LinkedIn</a></p></div>
-    <div class="span4"><p><img alt="Gmail logo" src="/img/gmail.png"/> <a href="mailto:claudiodangelis@gmail.com">Mail</a></p></div>
-</div>
-<!-- tweet & follow -->
-<div class="centered">
-<a href="https://twitter.com/intent/tweet?screen_name=daw___" class="twitter-mention-button" data-related="daw___">Tweet to @daw___</a>
-<a href="https://twitter.com/daw___" class="twitter-follow-button" data-show-count="false">Follow @daw___</a>
-</div>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-<!-- end tweet & follow -->
-<hr/>
-<!-- Latest posts -->
-<p><em>Recent posts:</em></p>
-<ul>
-{% for post in site.posts limit:5%}
-    <li class="sidebar_link"><a href='{{post.url}}'>{{ post.title }}</a></li>
-{% endfor %}
-</ul>
-<hr/>
-<p><em>Blog categories:</em></p>
-<div class="row-fluid lead">
-    {% for category in site.categories %}
-<a href="/blog/{{category[0]}}">{{ category[0] }}</a> 
-    {% endfor %}
-</div>
-<!--end sidebar-->
-</div>
+<p><img
+    class="img-circle"
+    src="http://www.gravatar.com/avatar/4285cec724092baacfe84304ca99e7ff?s=85"
+    alt="avatar"
+    >
+</p>
+<p>
+    <b>Claudio d'Angelis</b><br/>
+    <em>Interested in computer programming and progressive rock sounds<br/>
+    <a href="/about">Read More</a></em>
+</p>
+<hr style="width:30%;margin-right:0"/>
+<p>
+    <a href="/+">Google+</a><br/>
+    <a href="/@/">Twitter</a><br/>
+    <a href="/~">Github</a><br/>
+    <a href='&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#108;&#97;&#117;&#100;&#105;&#111;&#100;&#97;&#110;&#103;&#101;&#108;&#105;&#115;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;'>&#69;&#109;&#97;&#105;&#108;</a><br/>
+    <a href="http://www.claudiodangelis.com/feed.xml">RSS</a></li>
+</p>

@@ -1,0 +1,14 @@
+---
+layout: default
+title: Full blog archive
+---
+
+{% for post in site.posts %}
+<div>
+    <p>
+        <a href="{{ post.url }}">{{ post.title }}</a><br/>
+        <em><small>Published {{ post.date | date: "%B %d, %Y" }}</small></em><br/>
+        <small>{{ post.description }}</small>
+    </p>
+</div>
+{% endfor %}
