@@ -47,7 +47,7 @@ String soggetto = 'world';
 
 
 
-Un esempio di **Web Component**:
+Un esempio di **Web Components**:
 
 **Input**
 
