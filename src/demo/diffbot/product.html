@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>product</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    
+  </head>
+ 
+  <body>
+    <div class="container" style="margin-top:20px">
+      <div class="row">
+        <p> Analyze a product page... 
+          <input placeholder="URL" type="text" id="input"/>
+          <button id="btn">Analyze</button>
+          <img id="loading"/>
+        </p>
+        <p>...or try one of these:</p>
+        <p><a id="try1">http://www.amazon.com/Internetworking-TCP-IP-One-6th/dp/013608530X</a></p>
+        <p><a id="try2">http://www.amazon.com/Computer-Programming-Volumes-1-4A-Boxed/dp/0321751043</a></p>
+        <hr/>
+      </div>
+    
+    </div>
+    <div class="container">
+    
+    
+      <div class="row">
+        <div class="col-md-1"><p>URL</p></div>
+        <div class="col-md-11"><p id="url"></p></div>
+      </div>
+    
+    
+      <div class="row">
+        <div class="col-md-1"><p>Title</p></div>
+        <div class="col-md-11"><p id="title"></p></div>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-1"><p>Price</p></div>
+        <div class="col-md-11"><p id="price"></p></div>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-1"><p>Images</p></div>
+        <div class="col-md-11"><div id="images"></div></div>
+      </div>
+      
+    </div>
+    <script type="application/dart" src="product.dart"></script>
+    <!-- for this next line to work, your pubspec.yaml file must have a dependency on 'browser' -->
+    <script src="packages/browser/dart.js"></script>
+    <script src="packages/browser/interop.js"></script>
+  </body>
+</html>
