@@ -1,0 +1,291 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>Article class / article Library / Dart Documentation</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        </head>
+        <body data-library="article" data-type="Article">
+        <div class="page">
+        <div class="header">
+          <a href="../index.html"><div class="logo"></div></a>
+          <a href="../index.html">Dart Documentation</a>
+         &rsaquo; <a href="../article.html">article</a> &rsaquo; <a href="../article/Article.html">Article</a>        <div id="search-box">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </div>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+</div>
+<div class="content">
+        <h2><strong>Article</strong>
+          class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<pre class="source">
+class Article {
+ final Map&lt;String,dynamic&gt; _data;
+
+ Article(this._data);
+
+ /// Plain-text of the extracted article.
+ String get text =&gt; _data["text"];
+
+ /// Title of extracted article
+ String get title =&gt; _data["title"];
+
+ /// Article author
+ String get author =&gt; _data["author"];
+
+ /// Submitted URL
+ String get url =&gt; _data["url"];
+
+ /// Returned if the resolving URL is different from the submitted URL (e.g.,
+ /// link shortening services)
+ String get resolved_url =&gt; _data["resolved_url"];
+
+ /// Page favicon
+ String get icon =&gt; _data["icon"];
+
+ /// HTML of the extracted article (returned in place of [text] if the [html]
+ /// parameter is used)
+ String get html =&gt; _data["html"];
+
+ /// Summary text (returned if summary parameter is used)
+ String get summary =&gt; _data["summary"];
+
+ /// Article date, normalized in most cases to GMT.
+ DateTime get date =&gt; _data["date"];
+
+ /// Number of pages automatically concatenated to form the [text] response (By
+ /// default, Diffbot will automatically concatenate multiple-page articles)
+ int get numPages =&gt; _data["numPages"];
+
+ /// Array of media items (images or videos), if detected and extracted
+ List&lt;Map&lt;String,dynamic&gt;&gt; get media =&gt; _data["media"];
+
+ /// Array of tags (returned if tags parameter is used)
+ List&lt;String&gt; get tags =&gt; _data["tags"];
+
+ /// If the meta parameter is used, will return an object containing the page's
+ /// metatag names and values, if found. Includes nested objects for OpenGraph
+ /// (og), Twitter (twitter) and schema.org (microdata) tags.
+ Map&lt;String,dynamic&gt; get meta =&gt; _data["meta"];
+}
+</pre>
+</div>
+<div>
+<h3>Constructors</h3>
+<div class="method"><h4 id="">
+<button class="show-code">Code</button>
+new <strong>Article</strong>(Map&lt;String, dynamic&gt; _data) <a class="anchor-link" href="#"
+              title="Permalink to Article.Article">#</a></h4>
+<div class="doc">
+<div class="inherited">
+<p>Creates a new <a class="crossref" href="../dart_core/Object.html">Object</a> instance.</p>
+<p><a class="crossref" href="../dart_core/Object.html">Object</a> instances have no meaningful state, and are only useful
+through their identity. An <a class="crossref" href="../dart_core/Object.html">Object</a> instance is equal to itself
+only.</p>
+<div class="docs-inherited-from">docs inherited from Object </div></div>
+<pre class="source">
+Article(this._data);
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Properties</h3>
+<div class="field"><h4 id="author">
+<button class="show-code">Code</button>
+final String         <strong>author</strong> <a class="anchor-link"
+            href="#author"
+            title="Permalink to Article.author">#</a>
+        </h4>
+        <div class="doc">
+<p>Article author</p>
+<pre class="source">
+String get author =&gt; _data["author"];
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="date">
+<button class="show-code">Code</button>
+final DateTime         <strong>date</strong> <a class="anchor-link"
+            href="#date"
+            title="Permalink to Article.date">#</a>
+        </h4>
+        <div class="doc">
+<p>Article date, normalized in most cases to GMT.</p>
+<pre class="source">
+DateTime get date =&gt; _data["date"];
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="html">
+<button class="show-code">Code</button>
+final String         <strong>html</strong> <a class="anchor-link"
+            href="#html"
+            title="Permalink to Article.html">#</a>
+        </h4>
+        <div class="doc">
+<p>HTML of the extracted article (returned in place of <a class="crossref" href="../article/Article.html#text">text</a> if the <a class="crossref" href="../article/Article.html#html">html</a>
+parameter is used)</p>
+<pre class="source">
+String get html =&gt; _data["html"];
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="icon">
+<button class="show-code">Code</button>
+final String         <strong>icon</strong> <a class="anchor-link"
+            href="#icon"
+            title="Permalink to Article.icon">#</a>
+        </h4>
+        <div class="doc">
+<p>Page favicon</p>
+<pre class="source">
+String get icon =&gt; _data["icon"];
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="media">
+<button class="show-code">Code</button>
+final List&lt;Map&lt;String, dynamic&gt;&gt;         <strong>media</strong> <a class="anchor-link"
+            href="#media"
+            title="Permalink to Article.media">#</a>
+        </h4>
+        <div class="doc">
+<p>Array of media items (images or videos), if detected and extracted</p>
+<pre class="source">
+List&lt;Map&lt;String,dynamic&gt;&gt; get media =&gt; _data["media"];
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="meta">
+<button class="show-code">Code</button>
+final Map&lt;String, dynamic&gt;         <strong>meta</strong> <a class="anchor-link"
+            href="#meta"
+            title="Permalink to Article.meta">#</a>
+        </h4>
+        <div class="doc">
+<p>If the meta parameter is used, will return an object containing the page's
+metatag names and values, if found. Includes nested objects for OpenGraph
+(og), Twitter (twitter) and schema.org (microdata) tags.</p>
+<pre class="source">
+Map&lt;String,dynamic&gt; get meta =&gt; _data["meta"];
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="numPages">
+<button class="show-code">Code</button>
+final int         <strong>numPages</strong> <a class="anchor-link"
+            href="#numPages"
+            title="Permalink to Article.numPages">#</a>
+        </h4>
+        <div class="doc">
+<p>Number of pages automatically concatenated to form the <a class="crossref" href="../article/Article.html#text">text</a> response (By
+default, Diffbot will automatically concatenate multiple-page articles)</p>
+<pre class="source">
+int get numPages =&gt; _data["numPages"];
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="resolved_url">
+<button class="show-code">Code</button>
+final String         <strong>resolved_url</strong> <a class="anchor-link"
+            href="#resolved_url"
+            title="Permalink to Article.resolved_url">#</a>
+        </h4>
+        <div class="doc">
+<p>Returned if the resolving URL is different from the submitted URL (e.g.,
+link shortening services)</p>
+<pre class="source">
+String get resolved_url =&gt; _data["resolved_url"];
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="summary">
+<button class="show-code">Code</button>
+final String         <strong>summary</strong> <a class="anchor-link"
+            href="#summary"
+            title="Permalink to Article.summary">#</a>
+        </h4>
+        <div class="doc">
+<p>Summary text (returned if summary parameter is used)</p>
+<pre class="source">
+String get summary =&gt; _data["summary"];
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="tags">
+<button class="show-code">Code</button>
+final List&lt;String&gt;         <strong>tags</strong> <a class="anchor-link"
+            href="#tags"
+            title="Permalink to Article.tags">#</a>
+        </h4>
+        <div class="doc">
+<p>Array of tags (returned if tags parameter is used)</p>
+<pre class="source">
+List&lt;String&gt; get tags =&gt; _data["tags"];
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="text">
+<button class="show-code">Code</button>
+final String         <strong>text</strong> <a class="anchor-link"
+            href="#text"
+            title="Permalink to Article.text">#</a>
+        </h4>
+        <div class="doc">
+<p>Plain-text of the extracted article.</p>
+<pre class="source">
+String get text =&gt; _data["text"];
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="title">
+<button class="show-code">Code</button>
+final String         <strong>title</strong> <a class="anchor-link"
+            href="#title"
+            title="Permalink to Article.title">#</a>
+        </h4>
+        <div class="doc">
+<p>Title of extracted article</p>
+<pre class="source">
+String get title =&gt; _data["title"];
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="url">
+<button class="show-code">Code</button>
+final String         <strong>url</strong> <a class="anchor-link"
+            href="#url"
+            title="Permalink to Article.url">#</a>
+        </h4>
+        <div class="doc">
+<p>Submitted URL</p>
+<pre class="source">
+String get url =&gt; _data["url"];
+</pre>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-10-14 16:43:51.520</div>
+        </div>
+        <script async src="../client-live-nav.js"></script>
+        </body></html>
+        

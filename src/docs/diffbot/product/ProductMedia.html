@@ -1,0 +1,187 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>ProductMedia class / product Library / Dart Documentation</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        </head>
+        <body data-library="product" data-type="ProductMedia">
+        <div class="page">
+        <div class="header">
+          <a href="../index.html"><div class="logo"></div></a>
+          <a href="../index.html">Dart Documentation</a>
+         &rsaquo; <a href="../product.html">product</a> &rsaquo; <a href="../product/ProductMedia.html">ProductMedia</a>        <div id="search-box">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </div>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+</div>
+<div class="content">
+        <h2><strong>ProductMedia</strong>
+          class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<pre class="source">
+class ProductMedia {
+ final Map&lt;String, dynamic&gt; _data;
+ ProductMedia(this._data);
+ 
+ /// Type of media identified (image or video).
+ String get type =&gt; _data["type"];
+ 
+ /// Direct (fully resolved) link to image or video content.
+ String get link =&gt; _data["link"];
+ 
+ /// Image height, in pixels.
+ String get heigth =&gt; _data["heigth"];
+ 
+ /// Image width, in pixels.
+ String get width =&gt; _data["width"];
+ 
+ /// Diffbot-determined best caption for the image.
+ String get caption =&gt; _data["caption"];
+ 
+ /// Only images. Returns "True" if image is identified as primary in terms of
+ /// size or positioning.
+ //TODO: Replace String with bool
+ String get primary =&gt; _data["primary"];
+ 
+ /// Full document Xpath to the media item.
+ String get xpath =&gt; _data["xpath"];
+}
+</pre>
+</div>
+<div>
+<h3>Constructors</h3>
+<div class="method"><h4 id="">
+<button class="show-code">Code</button>
+new <strong>ProductMedia</strong>(Map&lt;String, dynamic&gt; _data) <a class="anchor-link" href="#"
+              title="Permalink to ProductMedia.ProductMedia">#</a></h4>
+<div class="doc">
+<div class="inherited">
+<p>Creates a new <a class="crossref" href="../dart_core/Object.html">Object</a> instance.</p>
+<p><a class="crossref" href="../dart_core/Object.html">Object</a> instances have no meaningful state, and are only useful
+through their identity. An <a class="crossref" href="../dart_core/Object.html">Object</a> instance is equal to itself
+only.</p>
+<div class="docs-inherited-from">docs inherited from Object </div></div>
+<pre class="source">
+ProductMedia(this._data);
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Properties</h3>
+<div class="field"><h4 id="caption">
+<button class="show-code">Code</button>
+final String         <strong>caption</strong> <a class="anchor-link"
+            href="#caption"
+            title="Permalink to ProductMedia.caption">#</a>
+        </h4>
+        <div class="doc">
+<p>Diffbot-determined best caption for the image.</p>
+<pre class="source">
+String get caption =&gt; _data["caption"];
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="heigth">
+<button class="show-code">Code</button>
+final String         <strong>heigth</strong> <a class="anchor-link"
+            href="#heigth"
+            title="Permalink to ProductMedia.heigth">#</a>
+        </h4>
+        <div class="doc">
+<p>Image height, in pixels.</p>
+<pre class="source">
+String get heigth =&gt; _data["heigth"];
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="link">
+<button class="show-code">Code</button>
+final String         <strong>link</strong> <a class="anchor-link"
+            href="#link"
+            title="Permalink to ProductMedia.link">#</a>
+        </h4>
+        <div class="doc">
+<p>Direct (fully resolved) link to image or video content.</p>
+<pre class="source">
+String get link =&gt; _data["link"];
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="primary">
+<button class="show-code">Code</button>
+final String         <strong>primary</strong> <a class="anchor-link"
+            href="#primary"
+            title="Permalink to ProductMedia.primary">#</a>
+        </h4>
+        <div class="doc">
+<p>Only images. Returns "True" if image is identified as primary in terms of
+size or positioning.</p>
+<pre class="source">
+String get primary =&gt; _data["primary"];
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="type">
+<button class="show-code">Code</button>
+final String         <strong>type</strong> <a class="anchor-link"
+            href="#type"
+            title="Permalink to ProductMedia.type">#</a>
+        </h4>
+        <div class="doc">
+<p>Type of media identified (image or video).</p>
+<pre class="source">
+String get type =&gt; _data["type"];
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="width">
+<button class="show-code">Code</button>
+final String         <strong>width</strong> <a class="anchor-link"
+            href="#width"
+            title="Permalink to ProductMedia.width">#</a>
+        </h4>
+        <div class="doc">
+<p>Image width, in pixels.</p>
+<pre class="source">
+String get width =&gt; _data["width"];
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="xpath">
+<button class="show-code">Code</button>
+final String         <strong>xpath</strong> <a class="anchor-link"
+            href="#xpath"
+            title="Permalink to ProductMedia.xpath">#</a>
+        </h4>
+        <div class="doc">
+<p>Full document Xpath to the media item.</p>
+<pre class="source">
+String get xpath =&gt; _data["xpath"];
+</pre>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-10-14 16:43:51.724</div>
+        </div>
+        <script async src="../client-live-nav.js"></script>
+        </body></html>
+        

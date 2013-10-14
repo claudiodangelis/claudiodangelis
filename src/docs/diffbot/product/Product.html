@@ -1,0 +1,159 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>Product class / product Library / Dart Documentation</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        </head>
+        <body data-library="product" data-type="Product">
+        <div class="page">
+        <div class="header">
+          <a href="../index.html"><div class="logo"></div></a>
+          <a href="../index.html">Dart Documentation</a>
+         &rsaquo; <a href="../product.html">product</a> &rsaquo; <a href="../product/Product.html">Product</a>        <div id="search-box">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </div>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+</div>
+<div class="content">
+        <h2><strong>Product</strong>
+          class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<pre class="source">
+class Product {
+ final Map&lt;String, dynamic&gt; _data;
+ 
+ Product(this._data);
+ 
+ /// URL submitted. Returned by default
+ String get url =&gt; _data["url"];
+ 
+ /// Returned if the resolving URL is different from the submitted URL (e.g.,
+ /// link shortening services). Returned by default.
+ String get resolved_url =&gt; _data["resolved_url"];
+ 
+ /// Returns the full contents of page meta tags, including sub-arrays for
+ /// OpenGraph tags, Twitter Card metadata, schema.org microdata, and -- if
+ /// available -- oEmbed metadata. Returned with fields.
+ get meta =&gt; _data["meta"];
+ 
+ /// If available, an array of link URLs and link text from page breadcrumbs.
+ /// Returned by default.
+ String get breadcrumb =&gt; _data["breadcrumb"];
+ 
+ List&lt;ProductItem&gt; get products =&gt; _data["products"];
+}
+</pre>
+</div>
+<div>
+<h3>Constructors</h3>
+<div class="method"><h4 id="">
+<button class="show-code">Code</button>
+new <strong>Product</strong>(Map&lt;String, dynamic&gt; _data) <a class="anchor-link" href="#"
+              title="Permalink to Product.Product">#</a></h4>
+<div class="doc">
+<div class="inherited">
+<p>Creates a new <a class="crossref" href="../dart_core/Object.html">Object</a> instance.</p>
+<p><a class="crossref" href="../dart_core/Object.html">Object</a> instances have no meaningful state, and are only useful
+through their identity. An <a class="crossref" href="../dart_core/Object.html">Object</a> instance is equal to itself
+only.</p>
+<div class="docs-inherited-from">docs inherited from Object </div></div>
+<pre class="source">
+Product(this._data);
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Properties</h3>
+<div class="field"><h4 id="breadcrumb">
+<button class="show-code">Code</button>
+final String         <strong>breadcrumb</strong> <a class="anchor-link"
+            href="#breadcrumb"
+            title="Permalink to Product.breadcrumb">#</a>
+        </h4>
+        <div class="doc">
+<p>If available, an array of link URLs and link text from page breadcrumbs.
+Returned by default.</p>
+<pre class="source">
+String get breadcrumb =&gt; _data["breadcrumb"];
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="meta">
+<button class="show-code">Code</button>
+final         <strong>meta</strong> <a class="anchor-link"
+            href="#meta"
+            title="Permalink to Product.meta">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns the full contents of page meta tags, including sub-arrays for
+OpenGraph tags, Twitter Card metadata, schema.org microdata, and -- if
+available -- oEmbed metadata. Returned with fields.</p>
+<pre class="source">
+get meta =&gt; _data["meta"];
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="products">
+<button class="show-code">Code</button>
+final List&lt;<a href="../product/ProductItem.html">ProductItem</a>&gt;         <strong>products</strong> <a class="anchor-link"
+            href="#products"
+            title="Permalink to Product.products">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+List&lt;ProductItem&gt; get products =&gt; _data["products"];
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="resolved_url">
+<button class="show-code">Code</button>
+final String         <strong>resolved_url</strong> <a class="anchor-link"
+            href="#resolved_url"
+            title="Permalink to Product.resolved_url">#</a>
+        </h4>
+        <div class="doc">
+<p>Returned if the resolving URL is different from the submitted URL (e.g.,
+link shortening services). Returned by default.</p>
+<pre class="source">
+String get resolved_url =&gt; _data["resolved_url"];
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="url">
+<button class="show-code">Code</button>
+final String         <strong>url</strong> <a class="anchor-link"
+            href="#url"
+            title="Permalink to Product.url">#</a>
+        </h4>
+        <div class="doc">
+<p>URL submitted. Returned by default</p>
+<pre class="source">
+String get url =&gt; _data["url"];
+</pre>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-10-14 16:43:51.762</div>
+        </div>
+        <script async src="../client-live-nav.js"></script>
+        </body></html>
+        

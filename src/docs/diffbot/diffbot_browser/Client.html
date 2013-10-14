@@ -1,0 +1,614 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>Client class / diffbot_browser Library / Dart Documentation</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        </head>
+        <body data-library="diffbot_browser" data-type="Client">
+        <div class="page">
+        <div class="header">
+          <a href="../index.html"><div class="logo"></div></a>
+          <a href="../index.html">Dart Documentation</a>
+         &rsaquo; <a href="../diffbot_browser.html">diffbot_browser</a> &rsaquo; <a href="../diffbot_browser/Client.html">Client</a>        <div id="search-box">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </div>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+</div>
+<div class="content">
+        <h2><strong>Client</strong>
+          class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<pre class="source">
+class Client extends BaseClient {
+ final String token;
+ Client(this.token);
+
+ Future&lt;Article&gt; getArticle (String url, {bool meta:false, bool html:false, 
+   bool dontStripAds:false, int timeout, bool tags:false,bool comments:false,
+   bool summary:false}) {
+
+   Completer&lt;Article&gt; completer = new Completer();
+   Map params = { "meta":meta, "html":html, "dontStripAds":dontStripAds, 
+                  "timeout":timeout, "tags":tags, "comments":comments,
+                  "summary":summary};
+
+   String _queryString = getQueryString(params);
+   String requestUrl = Uri.encodeFull(articleEndpoint + "?token=" + token +
+       "&amp;url=" + url + _queryString + "&amp;callback=handler");
+   
+   js.context["handler"] = new js.Callback.once((js.Proxy _data) {
+     Map data = {};
+
+     if(_data["error"] == null) {
+       // Builds a Dart native object
+       data["text"] = _data["text"];
+       data["title"] = _data["title"];
+       data["author"] = _data["author"];
+       data["url"] = _data["url"];
+       data["resovled_url"] = _data["resolved_url"];
+       data["icon"] = _data["icon"];
+       data["html"] = _data["html"];
+       data["summary"] = _data["summary"];
+       data["numPages"] = _data["numPages"];
+
+       // Process tags
+       if(tags) {
+         List&lt;String&gt; _tags = [];
+         for(var i = 0; i &lt; _data["tags"].length; i++) {
+           _tags.add(_data["tags"][i]);
+         }
+         data["tags"] = _tags;
+       }
+
+       // Process media
+       data["media"] = [];
+       for(var i = 0; i &lt; _data["media"].length; i++) {
+         Map&lt;String, String&gt; _media = {};
+         new JsObjectToMapAdapter.fromProxy(_data["media"][i]).forEach((k,v) {
+           _media[k.toString()] = v.toString();
+         });
+         data["media"].add(_media);
+       }
+
+       //Process meta
+       if(meta) {
+         data["meta"] = {};
+         Map&lt;String,String&gt; _microdata = {};
+         new JsObjectToMapAdapter.fromProxy(_data["meta"]).forEach((k,v) {
+           if(k == "microdata") {
+             new JsObjectToMapAdapter.fromProxy(v).forEach((k1,v1) {
+               _microdata[k1] = v1;
+             });
+           } else {
+             data["meta"][k] = v;
+           }
+           data["meta"]["microdata"] = _microdata;
+         });
+       }
+
+       //Process date
+       data["date"] = getDate(_data["date"]);
+       // returns the article
+       completer.complete(new Article(data));
+     } else {
+       // throws error msg
+       completer.completeError(new ClientException(_data["error"]));
+     }
+   });
+
+   ScriptElement scriptTag = new Element.tag('script');
+   scriptTag.src = requestUrl;
+   document.body.children.add(scriptTag);
+   scriptTag.remove();
+   return completer.future;
+ }
+ 
+ Future&lt;Frontpage&gt; getFrontpage(String url, {int timeout}) {
+   Completer&lt;Frontpage&gt; completer = new Completer();
+
+   String _queryString = '';
+   if(timeout != null) {
+     _queryString = '&amp;timeout=' + timeout.toString();
+   }
+   String requestUrl = Uri.encodeFull(frontpageEndpoint + "?token=" + token +
+       "&amp;url=" + url + _queryString + "&amp;format=json&amp;callback=handler");
+   
+   js.context["handler"] = new js.Callback.once((js.Proxy _data) {
+     Map data = {}; //Native dart map
+     data["title"] = _data["childNodes"][0]["childNodes"][0]["childNodes"][0];
+     data["sourceType"] =
+         _data["childNodes"][0]["childNodes"][1]["childNodes"][0];
+     
+     data["sourceURL"] =
+         _data["childNodes"][0]["childNodes"][2]["childNodes"][0];
+     
+     data["icon"] = _data["childNodes"][0]["childNodes"][3]["childNodes"][0];
+     data["numItems"] =
+         int.parse(_data["childNodes"][0]["childNodes"][4]["childNodes"][0]);
+
+     // initializing empty list for FpItems
+     data["items"] = [];
+     var _tmpFpItem = {}; // A temporary Frontpage Item
+     
+     for(var i = 1; i &lt; _data["childNodes"].length; i++) {
+       _tmpFpItem["title"] =
+           _data["childNodes"][i]["childNodes"][0]["childNodes"][0];
+       
+       _tmpFpItem["link"] =
+           _data["childNodes"][i]["childNodes"][1]["childNodes"][0];
+       
+       _tmpFpItem["pubDate"] =
+           getDate(_data["childNodes"][i]["childNodes"][2]["childNodes"][0]);
+       
+       _tmpFpItem["textSummary"] =
+           _data["childNodes"][i]["childNodes"][3]["childNodes"][0];
+       
+       try {
+         _tmpFpItem["description"] =
+             _data["childNodes"][i]["childNodes"][4]["childNodes"][0];
+       
+       } catch(e) {
+         _tmpFpItem["description"] = null;
+       }
+       
+       _tmpFpItem["id"] = _data["childNodes"][i]["id"];
+       _tmpFpItem["sp"] = _data["childNodes"][i]["sp"];
+       _tmpFpItem["fresh"] = _data["childNodes"][i]["fresh"];
+       _tmpFpItem["sr"] = _data["childNodes"][i]["sr"];
+       _tmpFpItem["type"] = _data["childNodes"][i]["type"];
+       _tmpFpItem["xroot"] = _data["childNodes"][i]["xroot"];
+       
+       data["items"].add(new FpItem(_tmpFpItem));
+       _tmpFpItem = {};
+       //TODO: error handling
+     }
+     completer.complete(new Frontpage(data));
+   });
+   
+   ScriptElement scriptTag = new Element.tag('script');
+   scriptTag.src = requestUrl;
+   document.body.children.add(scriptTag);
+   scriptTag.remove();
+   return completer.future;
+ }
+ 
+ Future&lt;Product&gt; getProduct(String url, {int timeout}) {
+   Completer&lt;Product&gt; completer = new Completer();
+   String _queryString = '';
+   if(timeout != null) {
+     _queryString = '&amp;timeout=' + timeout.toString();
+   }
+   String requestUrl = Uri.encodeFull(productEndpoint + "?token=" + token +
+       "&amp;url=" + url + _queryString + "&amp;callback=handler");
+   Map data = {}; //Global
+   Map dataProd = {}; // Product
+   js.context["handler"] = new js.Callback.once((js.Proxy _data) {
+     // Global response
+     data.addAll({
+       "type":_data["type"], "url":_data["url"],
+       "resolved_url":_data["resolved_url"],"breadcrumbs":_data["breadcrumbs"],
+       "products":[]
+     });
+     
+     // Product response
+     for(var i=0; i&lt;_data["products"].length; i++) {
+       // Cycle thru all products
+       // Product media
+       List&lt;ProductMedia&gt; _prodMediaList = [];
+       for(var j=0; j&lt;_data["products"][i]["media"].length; j++) {
+         Map _prodMedia = {};
+         new JsObjectToMapAdapter.fromProxy(_data["products"][i]["media"][j])
+         .forEach((k,v) {
+           _prodMedia[k.toString()] = v.toString();
+         });
+         _prodMediaList.add(new ProductMedia(_prodMedia));
+       }
+       Map _tmpProd = {
+         "title":_data["products"][i]["title"],
+         "description":_data["products"][i]["description"],
+         "brand":_data["products"][i]["brand"],
+         "offerPrice":_data["products"][i]["offerPrice"],
+         "regularPrice":_data["products"][i]["regularPrice"],
+         "saveAmount":_data["products"][i]["saveAmount"],
+         "shippingAmount":_data["products"][i]["shippingAmount"],
+         "productId":_data["products"][i]["productId"],
+         "upc":_data["products"][i]["upc"],
+         "prefixCode":_data["products"][i]["prefixCode"],
+         "productOrigin":_data["products"][i]["productOrigin"],
+         "isbn":_data["products"][i]["isbn"],
+         "sku":_data["products"][i]["sku"],
+         "mpn":_data["products"][i]["mpn"],
+         "media": _prodMediaList
+       };
+       data["products"].add(new ProductItem(_tmpProd));
+     }
+     /* 
+      * WARNING: in case of error (e.g. url not found, invalid token, etc.)
+      * Diffbot's Product APIs **do not** return any error code nor messages:
+      * 
+      * {
+      *   "type": "product",
+      *   "products": [
+      *     {
+      *       "title": "404 Not Found",
+      *       "offerPrice": "404",
+      *       "availability": false
+      *     }
+      *   ],
+      *  "url": "http://www.fake-non-existing-url.com"
+      * }
+      * 
+      */
+     completer.complete(new Product(data));
+   });
+   
+   ScriptElement scriptTag = new Element.tag('script');
+   scriptTag.src = requestUrl;
+   document.body.children.add(scriptTag);
+   scriptTag.remove();
+   return completer.future;
+ }
+}
+</pre>
+</div>
+<h3>Extends</h3>
+<p>
+<span class="type-box"><span class="icon-class"></span><a href="../base_client/BaseClient.html">BaseClient</a></span>&nbsp;&gt;&nbsp;<span class="type-box"><span class="icon-class"></span><strong>Client</strong></span></p>
+<div>
+<h3>Constructors</h3>
+<div class="method"><h4 id="">
+<button class="show-code">Code</button>
+new <strong>Client</strong>(String token) <a class="anchor-link" href="#"
+              title="Permalink to Client.Client">#</a></h4>
+<div class="doc">
+<div class="inherited">
+<p>Creates a new <a class="crossref" href="../dart_core/Object.html">Object</a> instance.</p>
+<p><a class="crossref" href="../dart_core/Object.html">Object</a> instances have no meaningful state, and are only useful
+through their identity. An <a class="crossref" href="../dart_core/Object.html">Object</a> instance is equal to itself
+only.</p>
+<div class="docs-inherited-from">docs inherited from Object </div></div>
+<pre class="source">
+Client(this.token);
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Properties</h3>
+<div class="field inherited"><h4 id="articleEndpoint">
+<button class="show-code">Code</button>
+final String         <strong>articleEndpoint</strong> <a class="anchor-link"
+            href="#articleEndpoint"
+            title="Permalink to Client.articleEndpoint">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../base_client/BaseClient.html">BaseClient</a> </div><div class="doc">
+<pre class="source">
+final String articleEndpoint = "http://www.diffbot.com/api/article"
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="frontpageEndpoint">
+<button class="show-code">Code</button>
+final String         <strong>frontpageEndpoint</strong> <a class="anchor-link"
+            href="#frontpageEndpoint"
+            title="Permalink to Client.frontpageEndpoint">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../base_client/BaseClient.html">BaseClient</a> </div><div class="doc">
+<pre class="source">
+final String frontpageEndpoint = "http://www.diffbot.com/api/frontpage"
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="productEndpoint">
+<button class="show-code">Code</button>
+final String         <strong>productEndpoint</strong> <a class="anchor-link"
+            href="#productEndpoint"
+            title="Permalink to Client.productEndpoint">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../base_client/BaseClient.html">BaseClient</a> </div><div class="doc">
+<pre class="source">
+final String productEndpoint = "http://api.diffbot.com/v2/product"
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="token">
+<button class="show-code">Code</button>
+final String         <strong>token</strong> <a class="anchor-link"
+            href="#token"
+            title="Permalink to Client.token">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+final String token
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Methods</h3>
+<div class="method"><h4 id="getArticle">
+<button class="show-code">Code</button>
+Future&lt;<a href="../article/Article.html">Article</a>&gt; <strong>getArticle</strong>(String url, {bool meta: false, bool html: false, bool dontStripAds: false, int timeout, bool tags: false, bool comments: false, bool summary: false}) <a class="anchor-link" href="#getArticle"
+              title="Permalink to Client.getArticle">#</a></h4>
+<div class="doc">
+<div class="inherited">
+<p>The Article API is used to extract clean article text from news article
+web pages.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../base_client/BaseClient.html">BaseClient</a> </div></div>
+<pre class="source">
+Future&lt;Article&gt; getArticle (String url, {bool meta:false, bool html:false, 
+ bool dontStripAds:false, int timeout, bool tags:false,bool comments:false,
+ bool summary:false}) {
+
+ Completer&lt;Article&gt; completer = new Completer();
+ Map params = { "meta":meta, "html":html, "dontStripAds":dontStripAds, 
+                "timeout":timeout, "tags":tags, "comments":comments,
+                "summary":summary};
+
+ String _queryString = getQueryString(params);
+ String requestUrl = Uri.encodeFull(articleEndpoint + "?token=" + token +
+     "&amp;url=" + url + _queryString + "&amp;callback=handler");
+ 
+ js.context["handler"] = new js.Callback.once((js.Proxy _data) {
+   Map data = {};
+
+   if(_data["error"] == null) {
+     // Builds a Dart native object
+     data["text"] = _data["text"];
+     data["title"] = _data["title"];
+     data["author"] = _data["author"];
+     data["url"] = _data["url"];
+     data["resovled_url"] = _data["resolved_url"];
+     data["icon"] = _data["icon"];
+     data["html"] = _data["html"];
+     data["summary"] = _data["summary"];
+     data["numPages"] = _data["numPages"];
+
+     // Process tags
+     if(tags) {
+       List&lt;String&gt; _tags = [];
+       for(var i = 0; i &lt; _data["tags"].length; i++) {
+         _tags.add(_data["tags"][i]);
+       }
+       data["tags"] = _tags;
+     }
+
+     // Process media
+     data["media"] = [];
+     for(var i = 0; i &lt; _data["media"].length; i++) {
+       Map&lt;String, String&gt; _media = {};
+       new JsObjectToMapAdapter.fromProxy(_data["media"][i]).forEach((k,v) {
+         _media[k.toString()] = v.toString();
+       });
+       data["media"].add(_media);
+     }
+
+     //Process meta
+     if(meta) {
+       data["meta"] = {};
+       Map&lt;String,String&gt; _microdata = {};
+       new JsObjectToMapAdapter.fromProxy(_data["meta"]).forEach((k,v) {
+         if(k == "microdata") {
+           new JsObjectToMapAdapter.fromProxy(v).forEach((k1,v1) {
+             _microdata[k1] = v1;
+           });
+         } else {
+           data["meta"][k] = v;
+         }
+         data["meta"]["microdata"] = _microdata;
+       });
+     }
+
+     //Process date
+     data["date"] = getDate(_data["date"]);
+     // returns the article
+     completer.complete(new Article(data));
+   } else {
+     // throws error msg
+     completer.completeError(new ClientException(_data["error"]));
+   }
+ });
+
+ ScriptElement scriptTag = new Element.tag('script');
+ scriptTag.src = requestUrl;
+ document.body.children.add(scriptTag);
+ scriptTag.remove();
+ return completer.future;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="getFrontpage">
+<button class="show-code">Code</button>
+Future&lt;<a href="../frontpage/Frontpage.html">Frontpage</a>&gt; <strong>getFrontpage</strong>(String url, {int timeout}) <a class="anchor-link" href="#getFrontpage"
+              title="Permalink to Client.getFrontpage">#</a></h4>
+<div class="doc">
+<div class="inherited">
+<p>The Frontpage API takes in a multifaceted “homepage” and returns
+individual page elements.  </p>
+<div class="docs-inherited-from">docs inherited from <a href="../base_client/BaseClient.html">BaseClient</a> </div></div>
+<pre class="source">
+Future&lt;Frontpage&gt; getFrontpage(String url, {int timeout}) {
+ Completer&lt;Frontpage&gt; completer = new Completer();
+
+ String _queryString = '';
+ if(timeout != null) {
+   _queryString = '&amp;timeout=' + timeout.toString();
+ }
+ String requestUrl = Uri.encodeFull(frontpageEndpoint + "?token=" + token +
+     "&amp;url=" + url + _queryString + "&amp;format=json&amp;callback=handler");
+ 
+ js.context["handler"] = new js.Callback.once((js.Proxy _data) {
+   Map data = {}; //Native dart map
+   data["title"] = _data["childNodes"][0]["childNodes"][0]["childNodes"][0];
+   data["sourceType"] =
+       _data["childNodes"][0]["childNodes"][1]["childNodes"][0];
+   
+   data["sourceURL"] =
+       _data["childNodes"][0]["childNodes"][2]["childNodes"][0];
+   
+   data["icon"] = _data["childNodes"][0]["childNodes"][3]["childNodes"][0];
+   data["numItems"] =
+       int.parse(_data["childNodes"][0]["childNodes"][4]["childNodes"][0]);
+
+   // initializing empty list for FpItems
+   data["items"] = [];
+   var _tmpFpItem = {}; // A temporary Frontpage Item
+   
+   for(var i = 1; i &lt; _data["childNodes"].length; i++) {
+     _tmpFpItem["title"] =
+         _data["childNodes"][i]["childNodes"][0]["childNodes"][0];
+     
+     _tmpFpItem["link"] =
+         _data["childNodes"][i]["childNodes"][1]["childNodes"][0];
+     
+     _tmpFpItem["pubDate"] =
+         getDate(_data["childNodes"][i]["childNodes"][2]["childNodes"][0]);
+     
+     _tmpFpItem["textSummary"] =
+         _data["childNodes"][i]["childNodes"][3]["childNodes"][0];
+     
+     try {
+       _tmpFpItem["description"] =
+           _data["childNodes"][i]["childNodes"][4]["childNodes"][0];
+     
+     } catch(e) {
+       _tmpFpItem["description"] = null;
+     }
+     
+     _tmpFpItem["id"] = _data["childNodes"][i]["id"];
+     _tmpFpItem["sp"] = _data["childNodes"][i]["sp"];
+     _tmpFpItem["fresh"] = _data["childNodes"][i]["fresh"];
+     _tmpFpItem["sr"] = _data["childNodes"][i]["sr"];
+     _tmpFpItem["type"] = _data["childNodes"][i]["type"];
+     _tmpFpItem["xroot"] = _data["childNodes"][i]["xroot"];
+     
+     data["items"].add(new FpItem(_tmpFpItem));
+     _tmpFpItem = {};
+     //TODO: error handling
+   }
+   completer.complete(new Frontpage(data));
+ });
+ 
+ ScriptElement scriptTag = new Element.tag('script');
+ scriptTag.src = requestUrl;
+ document.body.children.add(scriptTag);
+ scriptTag.remove();
+ return completer.future;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="getProduct">
+<button class="show-code">Code</button>
+Future&lt;<a href="../product/Product.html">Product</a>&gt; <strong>getProduct</strong>(String url, {int timeout}) <a class="anchor-link" href="#getProduct"
+              title="Permalink to Client.getProduct">#</a></h4>
+<div class="doc">
+<div class="inherited">
+<p>The Product API analyzes a shopping or e-commerce product page and returns
+information on the product.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../base_client/BaseClient.html">BaseClient</a> </div></div>
+<pre class="source">
+Future&lt;Product&gt; getProduct(String url, {int timeout}) {
+ Completer&lt;Product&gt; completer = new Completer();
+ String _queryString = '';
+ if(timeout != null) {
+   _queryString = '&amp;timeout=' + timeout.toString();
+ }
+ String requestUrl = Uri.encodeFull(productEndpoint + "?token=" + token +
+     "&amp;url=" + url + _queryString + "&amp;callback=handler");
+ Map data = {}; //Global
+ Map dataProd = {}; // Product
+ js.context["handler"] = new js.Callback.once((js.Proxy _data) {
+   // Global response
+   data.addAll({
+     "type":_data["type"], "url":_data["url"],
+     "resolved_url":_data["resolved_url"],"breadcrumbs":_data["breadcrumbs"],
+     "products":[]
+   });
+   
+   // Product response
+   for(var i=0; i&lt;_data["products"].length; i++) {
+     // Cycle thru all products
+     // Product media
+     List&lt;ProductMedia&gt; _prodMediaList = [];
+     for(var j=0; j&lt;_data["products"][i]["media"].length; j++) {
+       Map _prodMedia = {};
+       new JsObjectToMapAdapter.fromProxy(_data["products"][i]["media"][j])
+       .forEach((k,v) {
+         _prodMedia[k.toString()] = v.toString();
+       });
+       _prodMediaList.add(new ProductMedia(_prodMedia));
+     }
+     Map _tmpProd = {
+       "title":_data["products"][i]["title"],
+       "description":_data["products"][i]["description"],
+       "brand":_data["products"][i]["brand"],
+       "offerPrice":_data["products"][i]["offerPrice"],
+       "regularPrice":_data["products"][i]["regularPrice"],
+       "saveAmount":_data["products"][i]["saveAmount"],
+       "shippingAmount":_data["products"][i]["shippingAmount"],
+       "productId":_data["products"][i]["productId"],
+       "upc":_data["products"][i]["upc"],
+       "prefixCode":_data["products"][i]["prefixCode"],
+       "productOrigin":_data["products"][i]["productOrigin"],
+       "isbn":_data["products"][i]["isbn"],
+       "sku":_data["products"][i]["sku"],
+       "mpn":_data["products"][i]["mpn"],
+       "media": _prodMediaList
+     };
+     data["products"].add(new ProductItem(_tmpProd));
+   }
+   /* 
+    * WARNING: in case of error (e.g. url not found, invalid token, etc.)
+    * Diffbot's Product APIs **do not** return any error code nor messages:
+    * 
+    * {
+    *   "type": "product",
+    *   "products": [
+    *     {
+    *       "title": "404 Not Found",
+    *       "offerPrice": "404",
+    *       "availability": false
+    *     }
+    *   ],
+    *  "url": "http://www.fake-non-existing-url.com"
+    * }
+    * 
+    */
+   completer.complete(new Product(data));
+ });
+ 
+ ScriptElement scriptTag = new Element.tag('script');
+ scriptTag.src = requestUrl;
+ document.body.children.add(scriptTag);
+ scriptTag.remove();
+ return completer.future;
+}
+</pre>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-10-14 16:43:51.603</div>
+        </div>
+        <script async src="../client-live-nav.js"></script>
+        </body></html>
+        

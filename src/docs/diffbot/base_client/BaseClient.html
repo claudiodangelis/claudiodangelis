@@ -1,0 +1,153 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>BaseClient abstract class / base_client Library / Dart Documentation</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        </head>
+        <body data-library="base_client" data-type="BaseClient">
+        <div class="page">
+        <div class="header">
+          <a href="../index.html"><div class="logo"></div></a>
+          <a href="../index.html">Dart Documentation</a>
+         &rsaquo; <a href="../base_client.html">base_client</a> &rsaquo; <a href="../base_client/BaseClient.html">BaseClient</a>        <div id="search-box">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </div>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+</div>
+<div class="content">
+        <h2><strong>BaseClient</strong>
+          abstract class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<pre class="source">
+abstract class BaseClient {
+ String token;
+ final String articleEndpoint = "http://www.diffbot.com/api/article";
+ final String frontpageEndpoint = "http://www.diffbot.com/api/frontpage";
+ final String productEndpoint = "http://api.diffbot.com/v2/product";
+  
+ /// The Article API is used to extract clean article text from news article
+ /// web pages.
+ Future&lt;Article&gt; getArticle(String url, {bool meta:false,
+   bool html:false, bool dontStripAds:false, int timeout, bool tags:false,
+   bool comments:false, bool summary:false});
+ 
+ /// The Frontpage API takes in a multifaceted “homepage” and returns
+ /// individual page elements.  
+ Future&lt;Frontpage&gt; getFrontpage(String url, {int timeout});
+ 
+ //TODO: `meta`
+ //TODO: `fields`
+ /// The Product API analyzes a shopping or e-commerce product page and returns
+ /// information on the product.
+ Future&lt;Product&gt; getProduct(String url, {int timeout});
+ 
+ //TODO: Custom API
+ //TODO: Crawlbot API
+ //TODO: Batch Requests
+}
+</pre>
+</div>
+<h3>Subclasses</h3>
+<p>
+<span class="type-box"><span class="icon-class"></span><a href="../diffbot_browser/Client.html">Client</a></span>, <span class="type-box"><span class="icon-class"></span><a href="../diffbot_console/Client.html">Client</a></span></p>
+<div>
+<h3>Properties</h3>
+<div class="field"><h4 id="articleEndpoint">
+<button class="show-code">Code</button>
+final String         <strong>articleEndpoint</strong> <a class="anchor-link"
+            href="#articleEndpoint"
+            title="Permalink to BaseClient.articleEndpoint">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+final String articleEndpoint = "http://www.diffbot.com/api/article"
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="frontpageEndpoint">
+<button class="show-code">Code</button>
+final String         <strong>frontpageEndpoint</strong> <a class="anchor-link"
+            href="#frontpageEndpoint"
+            title="Permalink to BaseClient.frontpageEndpoint">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+final String frontpageEndpoint = "http://www.diffbot.com/api/frontpage"
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="productEndpoint">
+<button class="show-code">Code</button>
+final String         <strong>productEndpoint</strong> <a class="anchor-link"
+            href="#productEndpoint"
+            title="Permalink to BaseClient.productEndpoint">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+final String productEndpoint = "http://api.diffbot.com/v2/product"
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="token">
+<button class="show-code">Code</button>
+String         <strong>token</strong> <a class="anchor-link"
+            href="#token"
+            title="Permalink to BaseClient.token">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+String token
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Methods</h3>
+<div class="method"><h4 id="getArticle">
+abstract Future&lt;<a href="../article/Article.html">Article</a>&gt; <strong>getArticle</strong>(String url, {bool meta: false, bool html: false, bool dontStripAds: false, int timeout, bool tags: false, bool comments: false, bool summary: false}) <a class="anchor-link" href="#getArticle"
+              title="Permalink to BaseClient.getArticle">#</a></h4>
+<div class="doc">
+<p>The Article API is used to extract clean article text from news article
+web pages.</p>
+</div>
+</div>
+<div class="method"><h4 id="getFrontpage">
+abstract Future&lt;<a href="../frontpage/Frontpage.html">Frontpage</a>&gt; <strong>getFrontpage</strong>(String url, {int timeout}) <a class="anchor-link" href="#getFrontpage"
+              title="Permalink to BaseClient.getFrontpage">#</a></h4>
+<div class="doc">
+<p>The Frontpage API takes in a multifaceted “homepage” and returns
+individual page elements.  </p>
+</div>
+</div>
+<div class="method"><h4 id="getProduct">
+abstract Future&lt;<a href="../product/Product.html">Product</a>&gt; <strong>getProduct</strong>(String url, {int timeout}) <a class="anchor-link" href="#getProduct"
+              title="Permalink to BaseClient.getProduct">#</a></h4>
+<div class="doc">
+<p>The Product API analyzes a shopping or e-commerce product page and returns
+information on the product.</p>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-10-14 16:43:51.574</div>
+        </div>
+        <script async src="../client-live-nav.js"></script>
+        </body></html>
+        
