@@ -9,7 +9,7 @@ I wrote a Dart client library for [Diffbot](http://diffbot.com), which is _a vis
 
 
 
-This library can be used both in the browser that in the console, and can talk with three of the [main APIs](http://diffbot.com/products/automatic/):
+This library can be used both in the browser that in the console, and can talk to three of the [main APIs](http://diffbot.com/products/automatic/):
 
 - **Article API**, used to extract clean article text from news article web pages
 
