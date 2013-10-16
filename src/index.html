@@ -4,10 +4,12 @@ title: Homepage
 ---
 
 {% for post in paginator.posts%}
-<h1>{{ post.title }}</h1>
-<p><em><small>Published {{ post.date | date: "%B %d, %Y" }}</small></em></p>
-{{ post.excerpt }}
-<p><a href="{{ post.url }}"><span class="glyphicon glyphicon-log-in"></span>&nbsp; Read more</a></p>
+<div class="post-preview">
+    <h1>{{ post.title }}</h1>
+    <p><em><small>Published {{ post.date | date: "%B %d, %Y" }}</small></em></p>
+    {{ post.excerpt }}
+    <p><a href="{{ post.url }}"><span class="glyphicon glyphicon-log-in"></span>&nbsp; Read more</a></p>
+</div>
 {% endfor %}
 
 <ul class="pagination">
