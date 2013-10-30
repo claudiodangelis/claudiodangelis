@@ -1,12 +1,12 @@
 body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    /*font-family: 'Helvetica Neue', Helvetica, sans-serif;*/
 }
 
 #content {
     max-width: 700px;
     margin: auto;
-    font-size: 1.32em;
-    line-height: 1.4345em;
+    font-size: 1.175em;
+    line-height: 1.345em;
 }
 
 #sidebar {
@@ -15,7 +15,7 @@ body {
 
 
 p + p {
-    margin-bottom: 1.4em;
+    margin-bottom: 1.2em;
 }
 
 footer {
