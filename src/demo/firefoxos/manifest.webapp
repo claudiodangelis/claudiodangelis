@@ -1,9 +1,10 @@
 {
-    "name":"my app",
-    "launch_path":"/demo/firefoxos/build/app.html",
-    "permissions" : {
-        "desktop-notification" : {
-            "description" : "Per mostrare le notifiche"
-        }
-    }
+  "name":"my app",
+  "launch_path":"/demo/firefoxos/build/app.html",
+  "permissions" : {
+    "desktop-notification" : {
+      "description" : "Per mostrare le notifiche"
+      },
+  "installs_allowed_from": ["http://claudiodangelis.com"]
+  }
 }
