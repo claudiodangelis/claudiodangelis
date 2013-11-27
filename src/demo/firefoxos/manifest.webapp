@@ -1,0 +1,9 @@
+{
+    "name":"my app",
+    "launch_path":"/build/app.html",
+    "permissions" : {
+        "desktop-notification" : {
+            "description" : "Per mostrare le notifiche"
+        }
+    }
+}
