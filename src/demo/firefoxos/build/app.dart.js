@@ -1115,7 +1115,7 @@ call$1:function(a){return this.c(a)},
 "+call:1:0":0,
 $isEH:true,
 $is_aB:true}}],["","file:///home/dawson/workspace/firefoxos/app/web/app.dart",,S,{E2:function(){P.rT(P.xC(0,0,0,0,0,10),new S.em())},em:{"":"Tp;",
-call$0:function(){P.uw(J.UQ($.cM(),"Notification"),["Ciao Daniele",P.jT(H.B7(["body","Questa notifica arriva da Dart,fuck yeah"],P.L5(null,null,null,null,null)))])},
+call$0:function(){P.uw(J.UQ($.cM(),"Notification"),["Ciao Daniele",P.jT(H.B7(["body","This comes from Dart!"],P.L5(null,null,null,null,null)))])},
 "+call:0:0":0,
 $isEH:true}},1],["dart._collection.dev","dart:_collection-dev",,H,{Zi:function(a,b,c,d,e){var z,y,x
 if(b<d)for(z=b+e-1,y=d+e-1;z>=b;--z,--y){if(z<0||z>=a.length)throw H.e(a,z)
