@@ -208,10 +208,13 @@ if(b>=a.length||b<0)throw H.b(P.N(b))
 a[b]=c},
 $isList:true,
 $aszM:null,
+$ascX:null,
 $isList:true,
-$isqC:true},nM:{"":"Q;",$isnM:true,
+$isqC:true,
+$iscX:true},nM:{"":"Q;",$isnM:true,
 $asQ:function(){return[null]},
-$aszM:function(){return[null]}},tN:{"":"nM;"},Jt:{"":"nM;",$isJt:true},P:{"":"num/Gv;",
+$aszM:function(){return[null]},
+$ascX:function(){return[null]}},tN:{"":"nM;"},Jt:{"":"nM;",$isJt:true},P:{"":"num/Gv;",
 JV:function(a,b){return a%b},
 Vy:function(a){return Math.abs(a)},
 yu:function(a){var z
@@ -1111,8 +1114,8 @@ $is_bh:true},VX:{"":"Tp;c",
 call$1:function(a){return this.c(a)},
 "+call:1:0":0,
 $isEH:true,
-$is_aB:true}}],["","file:///home/dawson/workspace/aws/claudiodangelis/src/demo/firefoxos/web/app.dart",,S,{E2:function(){P.rT(P.xC(0,0,0,0,0,20),new S.em())},em:{"":"Tp;",
-call$0:function(){P.uw(J.UQ($.cM(),"Notification"),["Ciao","{body:\"Ciao Daniele, yeah funziona\"}"])},
+$is_aB:true}}],["","file:///home/dawson/workspace/firefoxos/app/web/app.dart",,S,{E2:function(){P.rT(P.xC(0,0,0,0,0,10),new S.em())},em:{"":"Tp;",
+call$0:function(){P.uw(J.UQ($.cM(),"Notification"),["Ciao Daniele",P.jT(H.B7(["body","Questa notifica arriva da Dart,fuck yeah"],P.L5(null,null,null,null,null)))])},
 "+call:0:0":0,
 $isEH:true}},1],["dart._collection.dev","dart:_collection-dev",,H,{Zi:function(a,b,c,d,e){var z,y,x
 if(b<d)for(z=b+e-1,y=d+e-1;z>=b;--z,--y){if(z<0||z>=a.length)throw H.e(a,z)
@@ -1150,6 +1153,7 @@ ez:function(a,b){var z=new H.A8(this,b)
 H.VM(z,[null,null])
 return z},
 $asmW:null,
+$ascX:null,
 $isqC:true},a7:{"":"a;Kw,qn,j2,mD",
 gl:function(){return this.mD},
 G:function(){var z,y,x,w
@@ -1171,12 +1175,15 @@ return z},
 gB:function(a){var z=this.Kw
 return z.gB(z)},
 $asmW:function(a,b){return[b]},
+$ascX:function(a,b){return[b]},
 static:{K1:function(a,b,c,d){var z
 if(!!a.$isqC){z=new H.xy(a,b)
 H.VM(z,[c,d])
 return z}z=new H.i1(a,b)
 H.VM(z,[c,d])
-return z}}},xy:{"":"i1;Kw,ew",$asi1:null,$isqC:true},MH:{"":"An;mD,RX,ew",
+return z}}},xy:{"":"i1;Kw,ew",$asi1:null,
+$ascX:function(a,b){return[b]},
+$isqC:true},MH:{"":"An;mD,RX,ew",
 ei:function(a){return this.ew.call$1(a)},
 G:function(){var z=this.RX
 if(z.G()){this.mD=this.ei(z.gl())
@@ -1188,6 +1195,7 @@ ei:function(a){return this.ew.call$1(a)},
 gB:function(a){return J.q8(this.qb)},
 Zv:function(a,b){return this.ei(J.i4(this.qb,b))},
 $asaL:function(a,b){return[b]},
+$ascX:function(a,b){return[b]},
 $isqC:true},SU:{"":"a;"},GD:{"":"a;hr<",
 n:function(a,b){var z
 if(b==null)return!1
@@ -1366,7 +1374,7 @@ P.IA(new P.ZL(this,a,b))},
 L7:function(a,b){this.OH(a)},
 $isvs:true,
 $isb8:true,
-static:{"":"Gn,Ry,C3,oN,NK",Dt:function(a){var z=new P.vs(0,$.X3,null,null,null,null,null,null)
+static:{"":"a9,Ry,C3,oN,NK",Dt:function(a){var z=new P.vs(0,$.X3,null,null,null,null,null,null)
 H.VM(z,[a])
 return z},Ab:function(a,b){var z=new P.vs(0,$.X3,null,null,null,null,null,null)
 H.VM(z,[b])
@@ -1918,6 +1926,8 @@ FI:function(a,b){return P.V7(this,null,this,a,b)},
 mg:function(a,b,c){return P.Qx(this,null,this,a,b,c)},
 Al:function(a){return a}}}],["dart.collection","dart:collection",,P,{Ou:function(a,b){return J.de(a,b)},T9:function(a){return J.v1(a)},Py:function(a,b,c,d,e){var z=new P.k6(0,null,null,null,null)
 H.VM(z,[d,e])
+return z},UD:function(a,b){var z=new P.PL(0,null,null,null,null)
+H.VM(z,[a,b])
 return z},yv:function(a){var z=new P.YO(0,null,null,null,null)
 H.VM(z,[a])
 return z},FO:function(a){var z,y
@@ -1983,6 +1993,12 @@ return z},
 gUQ:function(a){var z=new P.fG(this)
 H.VM(z,[H.ip(this,"k6",0)])
 return H.K1(z,new P.oi(this),H.ip(z,"mW",0),null)},
+x4:function(a){var z,y,x
+if(typeof a==="string"&&a!=="__proto__"){z=this.vv
+return z==null?!1:z[a]!=null}else if(typeof a==="number"&&(a&0x3ffffff)===a){y=this.OX
+return y==null?!1:y[a]!=null}else{x=this.OB
+if(x==null)return!1
+return this.aH(x[this.nm(a)],a)>=0}},
 t:function(a,b){var z,y,x,w,v,u,t
 if(typeof b==="string"&&b!=="__proto__"){z=this.vv
 if(z==null)y=null
@@ -2052,7 +2068,15 @@ call$1:function(a){var z=this.a
 return z.t(z,a)},
 "+call:1:0":0,
 $isEH:true,
-$is_aB:true},fG:{"":"mW;Fb",
+$is_aB:true},PL:{"":"k6;X5,vv,OX,OB,aw",
+nm:function(a){return H.CU(a)&0x3ffffff},
+aH:function(a,b){var z,y,x
+if(a==null)return-1
+z=a.length
+for(y=0;y<z;y+=2){x=a[y]
+if(x==null?b==null:x===b)return y}return-1},
+$ask6:null,
+$asZ0:null},fG:{"":"mW;Fb",
 gB:function(a){return this.Fb.X5},
 gA:function(a){var z=this.Fb
 return new P.EQ(z,z.Ig(),0,null)},
@@ -2062,6 +2086,7 @@ y=z.Ig()
 for(x=y.length,w=0;w<x;++w){b.call$1(y[w])
 if(y!==z.aw)throw H.b(P.a4(z))}},
 $asmW:null,
+$ascX:null,
 $isqC:true},EQ:{"":"a;Fb,aw,zi,fD",
 gl:function(){return this.fD},
 G:function(){var z,y,x
@@ -2188,6 +2213,7 @@ for(;y!=null;){b.call$1(y.kh)
 if(x!==z.zN)throw H.b(P.a4(z))
 y=y.DG}},
 $asmW:null,
+$ascX:null,
 $isqC:true},N6:{"":"a;Fb,zN,zq,fD",
 gl:function(){return this.fD},
 G:function(){var z=this.Fb
@@ -2263,14 +2289,17 @@ z=a.length
 for(y=0;y<z;++y)if(J.de(a[y],b))return y
 return-1},
 $asu3:null,
-$isqC:true},YO:{"":"jg;X5,vv,OX,OB,DM",
+$ascX:null,
+$isqC:true,
+$iscX:true},YO:{"":"jg;X5,vv,OX,OB,DM",
 nm:function(a){return H.CU(a)&0x3ffffff},
 aH:function(a,b){var z,y,x
 if(a==null)return-1
 z=a.length
 for(y=0;y<z;++y){x=a[y]
 if(x==null?b==null:x===b)return y}return-1},
-$asjg:null},oz:{"":"a;O2,DM,zi,fD",
+$asjg:null,
+$ascX:null},oz:{"":"a;O2,DM,zi,fD",
 gl:function(){return this.fD},
 G:function(){var z,y,x
 z=this.DM
@@ -2283,7 +2312,9 @@ this.zi=y+1
 return!0}}},u3:{"":"mW;",
 bu:function(a){return H.mx(this,"{","}")},
 $asmW:null,
-$isqC:true},mW:{"":"a;",
+$ascX:null,
+$isqC:true,
+$iscX:true},mW:{"":"a;",
 ez:function(a,b){return H.K1(this,b,H.ip(this,"mW",0),null)},
 aN:function(a,b){var z
 for(z=this.gA(this);z.G();)b.call$1(z.gl())},
@@ -2297,7 +2328,9 @@ for(z=this.gA(this),y=b;z.G();){x=z.gl()
 w=J.x(y)
 if(w.n(y,0))return x
 y=w.W(y,1)}throw H.b(P.N(b))},
-bu:function(a){return P.FO(this)}},lD:{"":"a;",
+bu:function(a){return P.FO(this)},
+$iscX:true,
+$ascX:null},lD:{"":"a;",
 gA:function(a){return new H.a7(a,this.gB(a),0,null)},
 Zv:function(a,b){return this.t(a,b)},
 aN:function(a,b){var z,y
@@ -2321,7 +2354,9 @@ z.KF("]")}finally{y=$.xb()
 y.Rz(y,a)}return z.gvM()},
 $isList:true,
 $aszM:null,
-$isqC:true},ZQ:{"":"Tp;a,b",
+$isqC:true,
+$iscX:true,
+$ascX:null},ZQ:{"":"Tp;a,b",
 call$2:function(a,b){var z=this.a
 if(!z.a)this.b.KF(", ")
 z.a=!1
@@ -2377,7 +2412,9 @@ Eo:function(a,b){var z=P.A(8,b)
 H.VM(z,[b])
 this.v5=z},
 $asmW:null,
+$ascX:null,
 $isqC:true,
+$iscX:true,
 static:{"":"TN",NZ:function(a,b){var z=new P.Sw(null,0,0,0)
 H.VM(z,[b])
 z.Eo(a,b)
@@ -2669,7 +2706,21 @@ H.VM(x,[null,null])
 C.Nm.FV(y,x)
 w=z.bind.apply(z,y)
 String(w)
-return P.ND(new w())}}},r7:{"":"E4;eh"},Tz:{"":"Wk;eh",
+return P.ND(new w())},jT:function(a){return P.ND(P.M0(a))},M0:function(a){return new P.Gn(P.UD(null,null)).call$1(a)}}},Gn:{"":"Tp;a",
+call$1:function(a){var z,y,x,w,v
+z=this.a
+if(z.x4(a))return z.t(z,a)
+y=J.x(a)
+if(typeof a==="object"&&a!==null&&!!y.$isZ0){x={}
+z.u(z,a,x)
+for(z=a.gvc(),z=z.gA(z);z.G();){w=z.gl()
+x[w]=this.call$1(y.t(a,w))}return x}else if(typeof a==="object"&&a!==null&&(a.constructor===Array||!!y.$iscX)){v=[]
+z.u(z,a,v)
+C.Nm.FV(v,y.ez(a,this))
+return v}else return P.wY(a)},
+"+call:1:0":0,
+$isEH:true,
+$is_aB:true},r7:{"":"E4;eh"},Tz:{"":"Wk;eh",
 t:function(a,b){var z
 if(typeof b==="number"&&b===C.CD.yu(b)){if(typeof b==="number"&&Math.floor(b)===b)if(!(b<0)){z=P.E4.prototype.t.call(this,this,"length")
 if(typeof z!=="number")throw H.s(z)
@@ -2683,7 +2734,8 @@ z=b>=z}else z=!0
 else z=!1
 if(z)H.vh(P.TE(b,0,P.E4.prototype.t.call(this,this,"length")))}P.E4.prototype.u.call(this,this,b,c)},
 gB:function(a){return P.E4.prototype.t.call(this,this,"length")},
-$aszM:null},Wk:{"":"E4+lD;",$isList:true,$aszM:null,$isqC:true},DV:{"":"Tp;",
+$aszM:null,
+$ascX:null},Wk:{"":"E4+lD;",$isList:true,$aszM:null,$isqC:true,$iscX:true,$ascX:null},DV:{"":"Tp;",
 call$1:function(a){var z=P.z8(a,!1)
 P.Dm(z,"_$dart_dartClosure",a)
 return z},
@@ -2721,8 +2773,10 @@ u:function(a,b,c){var z=C.i7(a)
 if(b>>>0!=b||J.J5(b,z))this.aq(a,b,z)
 a[b]=c},
 $aszM:function(){return[J.VA]},
+$ascX:function(){return[J.VA]},
 $isList:true,
 $isqC:true,
+$iscX:true,
 $isXj:true,
 "%":"Float32Array"},mJ:{"":"RK;",
 gB:function(a){return C.i7(a)},
@@ -2733,8 +2787,10 @@ u:function(a,b,c){var z=C.i7(a)
 if(b>>>0!=b||J.J5(b,z))this.aq(a,b,z)
 a[b]=c},
 $aszM:function(){return[J.VA]},
+$ascX:function(){return[J.VA]},
 $isList:true,
 $isqC:true,
+$iscX:true,
 $isXj:true,
 "%":"Float64Array"},rF:{"":"Tk;",
 gB:function(a){return C.i7(a)},
@@ -2745,8 +2801,10 @@ u:function(a,b,c){var z=C.i7(a)
 if(b>>>0!=b||J.J5(b,z))this.aq(a,b,z)
 a[b]=c},
 $aszM:function(){return[J.im]},
+$ascX:function(){return[J.im]},
 $isList:true,
 $isqC:true,
+$iscX:true,
 $isXj:true,
 "%":"Int16Array"},X6:{"":"ZK;",
 gB:function(a){return C.i7(a)},
@@ -2757,8 +2815,10 @@ u:function(a,b,c){var z=C.i7(a)
 if(b>>>0!=b||J.J5(b,z))this.aq(a,b,z)
 a[b]=c},
 $aszM:function(){return[J.im]},
+$ascX:function(){return[J.im]},
 $isList:true,
 $isqC:true,
+$iscX:true,
 $isXj:true,
 "%":"Int32Array"},ZX:{"":"z9;",
 gB:function(a){return C.i7(a)},
@@ -2769,8 +2829,10 @@ u:function(a,b,c){var z=C.i7(a)
 if(b>>>0!=b||J.J5(b,z))this.aq(a,b,z)
 a[b]=c},
 $aszM:function(){return[J.im]},
+$ascX:function(){return[J.im]},
 $isList:true,
 $isqC:true,
+$iscX:true,
 $isXj:true,
 "%":"Int8Array"},HS:{"":"W9;",
 gB:function(a){return C.i7(a)},
@@ -2781,8 +2843,10 @@ u:function(a,b,c){var z=C.i7(a)
 if(b>>>0!=b||J.J5(b,z))this.aq(a,b,z)
 a[b]=c},
 $aszM:function(){return[J.im]},
+$ascX:function(){return[J.im]},
 $isList:true,
 $isqC:true,
+$iscX:true,
 $isXj:true,
 "%":"Uint16Array"},Pz:{"":"Si;",
 gB:function(a){return C.i7(a)},
@@ -2793,8 +2857,10 @@ u:function(a,b,c){var z=C.i7(a)
 if(b>>>0!=b||J.J5(b,z))this.aq(a,b,z)
 a[b]=c},
 $aszM:function(){return[J.im]},
+$ascX:function(){return[J.im]},
 $isList:true,
 $isqC:true,
+$iscX:true,
 $isXj:true,
 "%":"Uint32Array"},zt:{"":"nb;",
 gB:function(a){return C.i7(a)},
@@ -2805,8 +2871,10 @@ u:function(a,b,c){var z=C.i7(a)
 if(b>>>0!=b||J.J5(b,z))this.aq(a,b,z)
 a[b]=c},
 $aszM:function(){return[J.im]},
+$ascX:function(){return[J.im]},
 $isList:true,
 $isqC:true,
+$iscX:true,
 $isXj:true,
 "%":"CanvasPixelArray|Uint8ClampedArray"},F0:{"":"Vju;",
 gB:function(a){return C.i7(a)},
@@ -2817,16 +2885,22 @@ u:function(a,b,c){var z=C.i7(a)
 if(b>>>0!=b||J.J5(b,z))this.aq(a,b,z)
 a[b]=c},
 $aszM:function(){return[J.im]},
+$ascX:function(){return[J.im]},
 $isList:true,
 $isqC:true,
+$iscX:true,
 $isXj:true,
-"%":";Uint8Array"},xG:{"":"AS+lD;",$isList:true,$aszM:null,$isqC:true},Vj:{"":"xG+SU;",$aszM:null},VW:{"":"AS+lD;",$isList:true,$aszM:null,$isqC:true},RK:{"":"VW+SU;",$aszM:null},DH:{"":"AS+lD;",$isList:true,$aszM:null,$isqC:true},Tk:{"":"DH+SU;",$aszM:null},e3:{"":"AS+lD;",$isList:true,$aszM:null,$isqC:true},ZK:{"":"e3+SU;",$aszM:null},Th:{"":"AS+lD;",$isList:true,$aszM:null,$isqC:true},z9:{"":"Th+SU;",$aszM:null},KB:{"":"AS+lD;",$isList:true,$aszM:null,$isqC:true},W9:{"":"KB+SU;",$aszM:null},Rb:{"":"AS+lD;",$isList:true,$aszM:null,$isqC:true},Si:{"":"Rb+SU;",$aszM:null},na:{"":"AS+lD;",$isList:true,$aszM:null,$isqC:true},nb:{"":"na+SU;",$aszM:null},xGn:{"":"AS+lD;",$isList:true,$aszM:null,$isqC:true},Vju:{"":"xGn+SU;",$aszM:null},u0:{"":"AS;",$isList:true,
+"%":";Uint8Array"},xG:{"":"AS+lD;",$isList:true,$aszM:null,$isqC:true,$iscX:true,$ascX:null},Vj:{"":"xG+SU;",$aszM:null,$ascX:null},VW:{"":"AS+lD;",$isList:true,$aszM:null,$isqC:true,$iscX:true,$ascX:null},RK:{"":"VW+SU;",$aszM:null,$ascX:null},DH:{"":"AS+lD;",$isList:true,$aszM:null,$isqC:true,$iscX:true,$ascX:null},Tk:{"":"DH+SU;",$aszM:null,$ascX:null},e3:{"":"AS+lD;",$isList:true,$aszM:null,$isqC:true,$iscX:true,$ascX:null},ZK:{"":"e3+SU;",$aszM:null,$ascX:null},Th:{"":"AS+lD;",$isList:true,$aszM:null,$isqC:true,$iscX:true,$ascX:null},z9:{"":"Th+SU;",$aszM:null,$ascX:null},KB:{"":"AS+lD;",$isList:true,$aszM:null,$isqC:true,$iscX:true,$ascX:null},W9:{"":"KB+SU;",$aszM:null,$ascX:null},Rb:{"":"AS+lD;",$isList:true,$aszM:null,$isqC:true,$iscX:true,$ascX:null},Si:{"":"Rb+SU;",$aszM:null,$ascX:null},na:{"":"AS+lD;",$isList:true,$aszM:null,$isqC:true,$iscX:true,$ascX:null},nb:{"":"na+SU;",$aszM:null,$ascX:null},xGn:{"":"AS+lD;",$isList:true,$aszM:null,$isqC:true,$iscX:true,$ascX:null},Vju:{"":"xGn+SU;",$aszM:null,$ascX:null},u0:{"":"AS;",$isList:true,
 $aszM:function(){return[J.im]},
 $isqC:true,
+$iscX:true,
+$ascX:function(){return[J.im]},
 $isXj:true,
 static:{"":"zi",}},fb:{"":"AS;",$isList:true,
 $aszM:function(){return[J.im]},
 $isqC:true,
+$iscX:true,
+$ascX:function(){return[J.im]},
 $isXj:true,
 static:{"":"H4",}}}],])
 I.$finishClasses($$,$,null)
