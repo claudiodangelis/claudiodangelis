@@ -5,6 +5,11 @@ permalink: .htaccess
 
 Options -Indexes
 
+<IfModule mod_rewrite.c>
+    RewriteCond %{HTTP_HOST} ^claudiodangelis\.com$
+    RewriteRule ^(.*) http://www.claudiodangelis.com/$1 [R=301]
+</IfModule>
+
 <IfModule mod_alias.c>
     Redirect permanent /@ https://twitter.com/daw___
     Redirect permanent /~ https://github.com/claudiodangelis
