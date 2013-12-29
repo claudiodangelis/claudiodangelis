@@ -6,6 +6,7 @@ permalink: .htaccess
 Options -Indexes
 
 <IfModule mod_rewrite.c>
+    RewriteEngine On
     RewriteCond %{HTTP_HOST} ^claudiodangelis\.com$
     RewriteRule ^(.*) http://www.claudiodangelis.com/$1 [R=301]
 </IfModule>
