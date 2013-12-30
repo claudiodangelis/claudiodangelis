@@ -1,0 +1,53 @@
+---
+layout: default
+title: Search results
+---
+
+<p><em>Results for &quot;<span id="keywords"></span>&quot;: <span id="counter"></span></em></p>
+<hr/>
+<div id="results">
+</div>
+<div id="noresults" class="jumbotron"></div>
+<script type="text/javascript" src="/assets/js/search.js"></script>
+<script type="text/javascript">
+    window.onload = function(e)
+    {
+        if (valid_search())
+        {
+            var k = document.getElementById('keywords');
+            k.innerHTML = window.location.search.replace('?q=','').replace(/\+/g,' ');
+            run_search(function()
+            {
+                document.getElementById('counter').innerHTML = final_results.length;
+                for (var i = 0, len = final_results.length; i < len; i++)
+                {
+                    var d = document.createElement('div');
+                    var p1 = document.createElement('p');
+                    var p2 = document.createElement('p');
+                    var a = document.createElement('a');
+                    a.title = final_results[i].t;
+                    a.href = final_results[i].u;
+                    a.innerHTML = final_results[i].t;
+                    p2.innerHTML = '<em>Published ' + final_results[i].d + '</em>';
+                    p1.appendChild(a);
+                    d.appendChild(p1);
+                    d.appendChild(p2);                    
+                    document.getElementById('results').appendChild(d);
+                }
+                
+                if (final_results.length == 0)
+                {   
+                    var n = document.getElementById('noresults');
+                    n.style.visibility = 'visible';
+                    n.style.display = 'block';
+                    n.innerHTML = '<h1>:-(</h1>'; 
+                }
+            });
+        }
+        else
+        {
+            window.location = '/';
+        }
+    }
+
+</script>

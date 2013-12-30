@@ -70,3 +70,8 @@ Via: http://avexdesigns.com/responsive-youtube-embed/
 .post-preview {
     margin-bottom: 50px;
 }
+
+#noresults {
+    visibility: hidden;
+    display: none;
+}

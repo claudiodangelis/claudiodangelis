@@ -36,16 +36,23 @@
           {% else %}
           <li><a href="/about">about</a></li>
           {% endif %}
-
-          <li class="plusone-button">{% include plusone.html %}</li>
         </ul>
+        <div class="col-sm-3 col-md-3 pull-right">
+            <form id="search-form" action="/search.html" method="GET" class="navbar-form">
+                <div class="input-group">
+                    <input id="searchbox" name="q" type="text" class="form-control search" placeholder="Search">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default search" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                    </div>
+                </div>
+            </form>
+        </div>
         <ul class="nav navbar-nav navbar-right">
           {% if page.url == '/archive.html' %}
           <li class="active"><a href="/archive.html">full blog archive</a></li>
           {% else %}
           <li><a href="/archive.html">full blog archive</a></li>
           {% endif %}
-
         </ul>
       </div><!--/.nav-collapse -->
     </div>
