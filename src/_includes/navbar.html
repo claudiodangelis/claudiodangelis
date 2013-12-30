@@ -37,7 +37,12 @@
           <li><a href="/about">about</a></li>
           {% endif %}
         </ul>
-        <div class="col-sm-3 col-md-3 pull-right">
+        <ul class="nav navbar-nav navbar-right col-md-4">
+          {% if page.url == '/archive.html' %}
+          <li class="active"><a href="/archive.html">full blog archive</a></li>
+          {% else %}
+          <li><a href="/archive.html">full blog archive</a></li>
+          {% endif %}
             <form id="search-form" action="/search.html" method="GET" class="navbar-form">
                 <div class="input-group">
                     <input id="searchbox" name="q" type="text" class="form-control search" placeholder="Search">
@@ -46,13 +51,6 @@
                     </div>
                 </div>
             </form>
-        </div>
-        <ul class="nav navbar-nav navbar-right">
-          {% if page.url == '/archive.html' %}
-          <li class="active"><a href="/archive.html">full blog archive</a></li>
-          {% else %}
-          <li><a href="/archive.html">full blog archive</a></li>
-          {% endif %}
         </ul>
       </div><!--/.nav-collapse -->
     </div>
