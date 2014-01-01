@@ -5,7 +5,7 @@ description: Interested in computer programming and progressive rock sounds
 version: 6.0
 safe: false
 port: 4000
-destination: /var/www/html
+destination: /srv/http/dawson/
 paginate: 5
 paginate_path: "/page:num"
 pygments: true
