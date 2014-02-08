@@ -1,5 +1,9 @@
 {
-  "name":"my app",
+  "name":"AngularDart Test",
+  "description": "This is just a test",
+  "icons": {
+    "60": "/demo/firefoxos/angular/dart_icon.png"
+  },
   "launch_path":"/demo/firefoxos/angular/cordova_test.html",
   "installs_allowed_from": ["http://claudiodangelis.com"]
 }
