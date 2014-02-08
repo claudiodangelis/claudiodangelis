@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>index</title>
+  </head>
+ 
+  <body>
+  <script type="text/javascript">
+    var manifestLocation = "http://claudiodangelis.com/demo/firefoxos/manifest.webapp";
+    var installRequest = navigator.mozApps.install(manifestLocation);
+  
+    installRequest.onsuccess = function(data) {
+        console.log("Successfully installed!");
+    };
+    
+    installRequest.onerror = function(err) {
+        console.log("Install error!");
+    };
+  </script>
+  </body>
+</html>
