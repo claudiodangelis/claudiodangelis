@@ -2,5 +2,4 @@
   "name":"my app",
   "launch_path":"/demo/firefoxos/angular/build/web/cordova_test.html",
   "installs_allowed_from": ["http://claudiodangelis.com"]
-  }
 }
