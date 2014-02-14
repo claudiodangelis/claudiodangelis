@@ -1,27 +1,53 @@
-
 body {
-  background-color: #F8F8F8;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 1.2em;
-  margin: 15px;
+  margin: 0 auto;
+  background: url("san-peter.webp") no-repeat;
+  background-image: url("san-peter.png");
+  background-repeat: no-repeat;
+  background-position: right 32px;
+  background-size: cover;
 }
 
-h1, p {
-  color: #333;
+
+nav {
+  color: #CCCCCC;
+  top: 0;
+  height: 41px;
+  background-color: #111111;
+  font-size:xx-large;
+  padding: 5px 0 0 5px;
 }
 
-#sample_container_id {
-  width: 100%;
-  height: 400px;
-  position: relative;
-  border: 1px solid #ccc;
-  background-color: #fff;
+nav a {
+  color: inherit;
+  display: inline-block;
+  position: fixed;
+  text-decoration: none;
 }
 
-#sample_text_id {
-  font-size: 24pt;
-  text-align: center;
-  margin-top: 140px;
+
+#main {
+  background-color: rgba(0,0,0,0.5);
+  margin-right: 10px;
+}
+
+#panel {
+    text-decoration:none;
+    color: white;
+    position: absolute;
+    visibility: hidden;
+    left: 0;
+    width: 66%;
+    top: 0;
+    bottom: 0;
+    box-shadow: 0px 0px 15px black;
+    background-color: rgba(0,0,0,0.9);
+    padding: 10px;
+    -webkit-transform-origin: 0%;
+    -webkit-transform: scaleX(0.00001);
+    -webkit-transition: -webkit-transform 0.1s ease-in-out;
+    outline: 0;
+}
+#panel:target {
+    -webkit-transform: scaleX(1);
+    visibility: visible;
 }
