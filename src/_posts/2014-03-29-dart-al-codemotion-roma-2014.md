@@ -8,7 +8,7 @@ category: dart
 ![Screenshot](/assets/img/posts/codemotion_2014_logo.png)
 
 Quest'anno sarò al [Codemotion Roma](http://rome.codemotionworld.com/2014/) come speaker insieme a [+Giovanni Laquidara](https://plus.google.com/+GiovanniLaquidara), terremo un talk su [Dart](https://dartlang.org) durante il quale introdurremo il linguaggio, parleremo degli strumenti di sviluppo messi a disposizione e presenteremo un'app di esempio.
-
+<!--more-->
 Il titolo del talk è **"Join the Dart Side of Web Development"**, si terrà il giorno 11 Aprile 2014 alle ore 14:00 e avrà durata di 40 minuti. Abstract:
 
 > Un linguaggio intuitivo e familiare ed un vasto insieme di librerie e strumenti di sviluppo: questo è Dart, la nuova piattaforma "batteries included" orientata allo sviluppo di applicazioni HTML5 scalabili e compatibili con i maggiori browser moderni, desktop e mobile, sviluppata in Google. Al Codemotion 2014 vedremo una panoramica del linguaggio e svilupperemo insieme una web app di esempio per vedere più da vicino tutti i vantaggi di Dart rispetto alle piattaforme tradizionali.
