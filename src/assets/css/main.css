@@ -75,3 +75,7 @@ Via: http://avexdesigns.com/responsive-youtube-embed/
     visibility: hidden;
     display: none;
 }
+
+.comment-count {
+    padding-left: 5px;
+}
