@@ -6,7 +6,7 @@ title: Homepage
 {% for post in paginator.posts%}
 <div class="post-preview">
     <h1>{{ post.title }}</h1>
-    <p><em><small>Published {{ post.date | date: "%B %d, %Y" }} <a class="comment-count" href="{{ post.url }}#disqus_thread"></a></small></em>, <div class="g-commentcount" data-href="{{ post.url }}"></div></p>
+    <p><em><small>Published {{ post.date | date: "%B %d, %Y" }} <a class="comment-count" href="{{ post.url }}#disqus_thread"></a></small></em></p>
     {{ post.excerpt }}
     <p><a href="{{ post.url }}"><span class="glyphicon glyphicon-log-in"></span>&nbsp; Read more</a></p>
 </div>
