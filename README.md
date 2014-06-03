@@ -2,7 +2,7 @@ Source code of my website at http://www.claudiodangelis.com.
 
 Read LICENSES and CREDITS
 
-[Google+](https://plus.google.com/115859961800127275872)
+[Google+](http://claudiodangelis.com/+)
   
 
-[Twitter](http://twitter.com/daw___)
+[Twitter](http://claudiodangelis.com/@/)
