@@ -3,6 +3,15 @@ layout: default
 title: Slides
 ---
 
+**Talk & Live Coding: Join The Dart Side Of Web Development (Reloaded)**
+With [+Giovanni Laquidara](https://plus.google.com/+GiovanniLaquidara/posts)  
+
+_May 30, 2014 @ [GDG MeetsU, University of L'Aquila](http://gdgmeetsu.gdg.io)_
+
+<a class="btn btn-primary" href="/slides/Join_The_Dart_Side_Of_Webdevelopment_Reloaded.pdf">Slides (PDF)</a>
+<a class="btn btn-default" href="http://www.slideshare.net/ClaudiodAngelis/join-the-dart-side-of-webdevelopment-reloaded">Slides (slideshare.net)</a>
+<a class="btn btn-default" href="https://github.com/claudiodangelis/gdg-meetsu-aquila-livecoding">Code from "Live Coding" session</a>
+
 ---
 
 **Talk: Web App Engineering with Dart**
