@@ -79,3 +79,9 @@ Via: http://avexdesigns.com/responsive-youtube-embed/
 .comment-count {
     padding-left: 5px;
 }
+
+@media (max-width: 768px) {
+    #sidebar {
+        text-align: center;
+    }
+}
