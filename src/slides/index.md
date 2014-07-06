@@ -9,7 +9,7 @@ With [+Giovanni Laquidara](https://plus.google.com/+GiovanniLaquidara/posts)
 _May 30, 2014 @ [GDG MeetsU, University of L'Aquila](http://gdgmeetsu.gdg.io)_
 
 <a class="btn btn-primary" href="/slides/Join_The_Dart_Side_Of_Webdevelopment_Reloaded.pdf">Slides (PDF)</a>
-<a class="btn btn-default" href="http://www.slideshare.net/ClaudiodAngelis/join-the-dart-side-of-webdevelopment-reloaded">Slides (slideshare.net)</a>
+<a class="btn btn-default" href="https://speakerdeck.com/claudiodangelis/gdg-meetsu-at-university-of-laquila">Slides</a>
 <a class="btn btn-default" href="https://github.com/claudiodangelis/gdg-meetsu-aquila-livecoding">Code from "Live Coding" session</a>
 
 ---
@@ -21,7 +21,7 @@ _May 30, 2014 @ [GDG MeetsU, University of L'Aquila](http://gdgmeetsu.gdg.io)_
 _April 25, 2014 @ [AppDays, Pordenone](http://www.radioamatorepordenone.it/iniziative/appdays/)_
 
 <a class="btn btn-primary" href="/slides/Web_App_Engineering_with_Dart.pdf">Slides (PDF)</a>
-<a class="btn btn-default" href="http://www.slideshare.net/ClaudiodAngelis/appdays-pordenone-2014-web-app-engineering-with-dart">Slides (slideshare.net)</a>
+<a class="btn btn-default" href="https://speakerdeck.com/claudiodangelis/web-app-engineering-con-dart-appdays-at-fiera-del-radioamatore-pordenone">Slides</a>
 <a href="https://github.com/claudiodangelis/dartdemo-appdays2014" class="btn btn-default">Codelab</a>
 
 ---
@@ -40,4 +40,4 @@ _April 11, 2014 @ [Codemotion Rome](http://rome.codemotionworld.com/2014/)_
 
 _July, 2013_
 
-<a class="btn btn-primary" href="/slides/gdl-italia-2/">Slides</a> <a class="btn btn-default" href="https://github.com/claudiodangelis/dart_OXO">Demo app</a> <a class="btn btn-default" href="https://www.youtube.com/watch?v=LZXSZ1feQqc&feature=youtu.be">YouTube</a>
+<a class="btn btn-primary" href="https://speakerdeck.com/claudiodangelis/google-developers-live-italia-analisi-di-una-applicazione-in-dart">Slides</a> <a class="btn btn-default" href="https://github.com/claudiodangelis/dart_OXO">Demo app</a> <a class="btn btn-default" href="https://www.youtube.com/watch?v=LZXSZ1feQqc&feature=youtu.be">YouTube</a>
