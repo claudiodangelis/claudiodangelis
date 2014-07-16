@@ -3,6 +3,7 @@ layout: default
 title: Dart&#58; importing local libraries with git
 lang: en
 category: dart
+tags: [dart, dartlang, libraries, git]
 ---
 
 We have a couple of ways to manage application's dependencies with **pub**, we can
@@ -108,7 +109,7 @@ Dependencies installed!
 
 Now we're ready to run our awesome application:
 {% highlight sh %}
-$ dart bin/my_app.dart 
+$ dart bin/my_app.dart
 Hello darling !
 {% endhighlight %}
 

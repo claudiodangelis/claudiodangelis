@@ -3,11 +3,12 @@ layout: default
 title: Blogging with Jekyll using Git, Github and Amazon AWS
 lang: en
 category: web
+tags: [web development, blogging, aws, amazon aws, git, github]
 ---
 
 I've been using **Jekyll** a lot lately, I'm totally in love with it, it's a simple,
 fast and brilliant Ruby tool to generate static websites and blogs. Well,
-this post is not really about Jekyll _per se_, it's more likely about the way I use it inside my 
+this post is not really about Jekyll _per se_, it's more likely about the way I use it inside my
 _ecosystem_.  
 If you want to learn more about Jekyll, I think the [official website](http://jekyllrb.com)
 is a good place to start from.
@@ -24,7 +25,7 @@ so I decided to host my site there instead of Github Pages.
 So this is the scenario, now let's take a look at the workflow: I push changes
 both to AWS and Github, then a _post-receive_
 [hook script](http://git-scm.com/book/en/Customizing-Git-Git-Hooks) on the server
-builds and publishes the Jekyll blog. 
+builds and publishes the Jekyll blog.
 
 ![Screenshot](/assets/img/posts/jekyll-aws.png)
 
@@ -106,7 +107,7 @@ have a working directory.
 
     Now set the content of **post-receive** script:
 
-        
+
         unset $(git rev-parse --local-env-vars)
         cd /home/ec2-user/mysite
         git pull
@@ -114,15 +115,15 @@ have a working directory.
         jekyll build
 
 
-    
 
 
-3. We're done with the remote instance, let's go back to the local machine and 
+
+3. We're done with the remote instance, let's go back to the local machine and
 clone the remote repository.
 
         # you're on your local machine
         cd ~/workspace
-        ssh-add ~/Documents/ec2-user.pem 
+        ssh-add ~/Documents/ec2-user.pem
         git clone ec2-user@mysite.com:~/mysite.git
 
     If everything goes fine you should see this message:
@@ -196,4 +197,3 @@ If everything's gone fine, you should see an output like this:
 ---
 
 As usual, feedback and suggestions are always welcome. Happy blogging everybody!
-

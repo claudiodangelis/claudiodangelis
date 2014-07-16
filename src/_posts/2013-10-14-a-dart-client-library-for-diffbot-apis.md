@@ -3,9 +3,10 @@ layout: default
 title: A Dart client library for Diffbot APIs
 lang: en
 category: dart
+tags: [dart, dartlang, diffbot, libraries]
 ---
 
-I wrote a Dart client library for [Diffbot](http://diffbot.com), which is _a visual learning robot that identifies and extracts the important parts of any web page_. In the case of an article, Diffbot returns title, author, images, tags, etc. 
+I wrote a Dart client library for [Diffbot](http://diffbot.com), which is _a visual learning robot that identifies and extracts the important parts of any web page_. In the case of an article, Diffbot returns title, author, images, tags, etc.
 
 
 
@@ -61,7 +62,7 @@ client.getArticle('ARTICLE_URL', options).then((Article article) {
 Here are three live examples, one for each API:
 
 - [Article API demo](/demo/diffbot/article.html)
-    
+
     This will show **Title**, **Author**, **Date** and of course **Content** for three articles; you can also submit your own article.
 
 - [Frontpage API demo](/demo/diffbot/frontpage.html)

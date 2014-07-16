@@ -3,6 +3,7 @@ layout: default
 title: Openbox and dual-monitor setup&#58; placing popup dialogs
 lang: en
 category: linux
+tags: [linux, openbox]
 ---
 
 > This post is primarly a note to self

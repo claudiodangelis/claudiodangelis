@@ -3,6 +3,7 @@ layout: default
 title: Dart, Web UI + js libraries, Google+ API
 lang: en
 category: dart
+tags: [dart, dartlang, google api, web ui]
 ---
 
 Today's blog post is about a sample application that uses Web UI and js libraries and shows some information about you on Google+. To retrieve these informations, application uses the [Google APIs Client Library for JavaScript](http://code.google.com/p/google-api-javascript-client/).
@@ -12,7 +13,7 @@ Funny story:  I chose to use Google API **javascript** client (handled with dart
 <!--more-->
 ## The application
 
-The applicaton is very simple: once you have authenticated and the application is allowed to access your Google+ profile data, some information will be displayed: name, profile picture, tagline, "about me" and links. 
+The applicaton is very simple: once you have authenticated and the application is allowed to access your Google+ profile data, some information will be displayed: name, profile picture, tagline, "about me" and links.
 
 <div class="row-fluid">
   <img src="/assets/img/posts/dart-mdv-googleplus-1.png">
@@ -122,7 +123,7 @@ js.context.RequestCallback = new js.Callback.once((js.Proxy jsonResp, var rawRes
   tagline = data[0]['result']['tagline'];
   pic = data[0]['result']['image']['url'];
   aboutMe = new SafeHtml.unsafe('<div>''${data[0]['result']['aboutMe']}</div>');
-  
+
   watchers.dispatch();
 
 });
@@ -167,7 +168,7 @@ main(){
     js.context.init = new js.Callback.once((){
       js.context.window.setTimeout(js.context.auth, 1);
       });
-    
+
     js.context.auth = new js.Callback.many((){
       js.context.gapi.client.setApiKey('AIzaSyDOtMNdtbw17o9bs-kW7G6O3S05p0H8wYM');
       js.context.window.setTimeout(
@@ -215,7 +216,7 @@ main(){
       tagline = data[0]['result']['tagline'];
       pic = data[0]['result']['image']['url'];
       aboutMe = new SafeHtml.unsafe('<div>''${data[0]['result']['aboutMe']}</div>');
-      
+
       watchers.dispatch();
 
     });
@@ -236,7 +237,7 @@ main(){
 
 ## The HTML interface
 
-The app interface is really simple: 
+The app interface is really simple:
 
 {% highlight html %}
 {% raw %}
@@ -287,11 +288,10 @@ Last interesting thing to show is how web_ui handles Dart lists:
 {% endraw %}
 {% endhighlight %}
 
-You can intuitively read it as: "<em>for each <strong>url</strong> in <strong>urls</strong> do something with <strong>url</strong></em>". 
+You can intuitively read it as: "<em>for each <strong>url</strong> in <strong>urls</strong> do something with <strong>url</strong></em>".
 
 ## Demo and source code
 
 You can play with it  following this link (javascript version): [dart-mdv-googleplus](/demo/dart-mdv-googleplus/web/out/google_plus.html)
 
 or get the [code at github](https://github.com/claudiodangelis/dart-mdv-googleplus)
-

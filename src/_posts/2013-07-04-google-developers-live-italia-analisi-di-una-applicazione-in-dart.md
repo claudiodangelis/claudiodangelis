@@ -3,6 +3,7 @@ layout: default
 title: Google Developers Live Italia&#58; Analisi di una applicazione in Dart
 lang: it
 category: dart
+tags: [dart, dartlang]
 ---
 
 >_Note for non-italian readers: while this video is in Italian, discussed application &mdash; a dart implementation of tic-tac-toe &mdash;

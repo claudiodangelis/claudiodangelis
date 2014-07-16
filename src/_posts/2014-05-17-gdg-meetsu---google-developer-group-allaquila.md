@@ -3,10 +3,11 @@ layout: default
 title: GDG MeetsU - Google Developer Group all'Aquila
 lang: it
 category: dart
+tags: [dart, dartlang, events]
 ---
 ![Banner](/assets/img/posts/gdgmeetsu.png)
 
-Il **30 Maggio 2014** si terrà presso **l'Università degli Studi dell'Aquila** il [GDG MeetsU](https://plus.google.com/u/0/communities/115675971195472891244), evento ad ingresso gratuito organizzato dal [+GDG Roma L-Ab](https://plus.google.com/110676501469531199993/posts) ricco di talk, codelab, contest e molto altro su Android, AngularJS, Big Data, Chrome App, Dart, GCM, Machine Learning, Sicurezza e Wearable Computing. 
+Il **30 Maggio 2014** si terrà presso **l'Università degli Studi dell'Aquila** il [GDG MeetsU](https://plus.google.com/u/0/communities/115675971195472891244), evento ad ingresso gratuito organizzato dal [+GDG Roma L-Ab](https://plus.google.com/110676501469531199993/posts) ricco di talk, codelab, contest e molto altro su Android, AngularJS, Big Data, Chrome App, Dart, GCM, Machine Learning, Sicurezza e Wearable Computing.
 
 Come al solito, [+Giovanni Laquidara](https://plus.google.com/+GiovanniLaquidara) ed io terremo un intervento di circa un'ora e mezza su **Dart** durante il quale vedremo una panoramica del linguaggio e ci sporcheremo le mani con un po' di codice :-)
 

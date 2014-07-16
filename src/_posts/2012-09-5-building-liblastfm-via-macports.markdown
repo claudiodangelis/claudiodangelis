@@ -3,6 +3,7 @@ layout: default
 title: Building liblastfm via macports
 lang: en
 category: osx
+tags: [mac os x, osx]
 ---
 
 First run this:

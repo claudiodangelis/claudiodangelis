@@ -3,6 +3,7 @@ layout: default
 title: GDL Italia - Introduzione a Dart&#58; editor e codice di esempio
 lang: it
 category: dart
+tags: [dart, dartlang, dartlang italia, dart editor]
 ---
 
 Oggi è andato in onda il mio primo episodio su Dart per [Google Developers Live](https://developers.google.com/live/shows/242142111/), una velocissima panoramica sulle caratteristiche fondamentali del linguaggio e di [Dart Editor](http://dartlang.org/editor), l'editor ufficiale.

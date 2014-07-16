@@ -3,6 +3,7 @@ layout: default
 title: Get obconf running on openbox 3.5
 lang: en
 category: linux
+tags: [linux, openbox]
 ---
 
 

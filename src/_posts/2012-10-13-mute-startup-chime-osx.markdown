@@ -3,6 +3,7 @@ layout: default
 title: Mute the Mac OS X startup sound, the fastest way
 lang: en
 category: osx
+tags: [osx, mac os x]
 ---
 
 
@@ -29,10 +30,10 @@ and
 {% highlight applescript %}
 set volume with output muted
 {% endhighlight %}
-After this, the code will bind those scripts to the _LoginHook_ and _LogoutHook_ handlers: when you will log out, sound will be muted, after you logged in, sound will be un-muted. 
+After this, the code will bind those scripts to the _LoginHook_ and _LogoutHook_ handlers: when you will log out, sound will be muted, after you logged in, sound will be un-muted.
 
  If you want to restore startup chime, type:
-   
+
 {% highlight sh %}
 sudo defaults delete com.apple.loginwindow LoginHook
 sudo defaults delete com.apple.loginwindow LogoutHook

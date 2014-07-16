@@ -3,6 +3,7 @@ layout: default
 title: Mac OS X&#58; Launch Terminal from keyboard shortcut
 lang: en
 category: osx
+tags: [terminal, osx, mac os x]
 ---
 
 
@@ -16,7 +17,7 @@ category: osx
 <li><p>Set the content of the script to:</p>
 {% highlight applescript %}
 on run {input, parameters}
-	
+
   tell application "Terminal"
     reopen
     activate

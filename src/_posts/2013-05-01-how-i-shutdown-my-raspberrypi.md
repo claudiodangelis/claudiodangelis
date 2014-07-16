@@ -3,6 +3,7 @@ layout: default
 title: How I shutdown my Raspberry Pi
 lang: en
 category: linux
+tags: [linux, raspberry pi, rpi, raspberrypi]
 ---
 
 I have a Raspberry Pi board and some days ago I decided to use it as a sort of print server at home, excited about the idea of being able to plug the RasPi's power supply then turn the printer on and wirelessly send it documents from my laptop(s).  
@@ -35,7 +36,7 @@ So, I wrote this simple python tool (very cool name: **unplug2shutdown**) that b
 - **Asks** you to plug in the device you want to use as a shutdown handler
 - **Waits** for that device to be removed and then **run** `shutdown -h now`
 
-Pretty simple. And it works with any kind of USB device as well: a flash/external drive, a SD/MMC adapter (even with no card in it), a WiFi adapter, a **printer**, and so on. 
+Pretty simple. And it works with any kind of USB device as well: a flash/external drive, a SD/MMC adapter (even with no card in it), a WiFi adapter, a **printer**, and so on.
 
 Coming back to my print server scenario, I have set the printer itself as a shutdown handler, so when I physycally turn it off, I have just to wait until RasPi's green lights go out and then I can safely unplug power supply.  
 If I chose a WiFi adapter, I would just unplug it then plug it in back to send the shutdown signal.
@@ -70,7 +71,7 @@ About the installation, since the tool is at a **very early stage**, there's no 
 
         /path/to/unplug2shutdown.py &
 
-4. unplug the device and look at the magic; 
+4. unplug the device and look at the magic;
 
 
 If you want to reconfigure it, you have to run `./unplug2shutdown.py --configure` again.

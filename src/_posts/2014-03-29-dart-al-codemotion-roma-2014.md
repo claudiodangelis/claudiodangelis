@@ -3,6 +3,7 @@ layout: default
 title: Dart al Codemotion Roma 2014
 lang: it
 category: dart
+tags: [dart, dartlang, events]
 ---
 
 ![Screenshot](/assets/img/posts/codemotion_2014_logo.png)

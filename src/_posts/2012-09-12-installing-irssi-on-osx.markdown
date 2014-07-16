@@ -3,6 +3,7 @@ layout: default
 title: Installing irssi on OSX
 lang: en
 category: osx
+tags: [osx, mac os x]
 ---
 
 ![Screenshot](/assets/img/posts/screenshot_irssi.png)
@@ -26,7 +27,7 @@ Build and install packages with `./configure`, `make && sudo make install`, no p
 
 ## Possible errors
 
-1. **gettext**     
+1. **gettext**
 
 		stpncpy.c:34: error: expected declaration specifiers or ‘...’ before numeric constant
 		stpncpy.c:34: error: expected ‘)’ before ‘!=’ token
@@ -37,22 +38,21 @@ Build and install packages with `./configure`, `make && sudo make install`, no p
 		make[2]: *** [all-recursive] Error 1
 		make[1]: *** [all] Error 2
 		make: *** [all-recursive] Error 1
- 
+
  	To fix this issue, edit `/gettext-tools/gnulib-lib/stpncpy.c`, go to line **34** column 1 and replace `__stpncpy` with `__stpcpy`.
 
- 
+
 
 2. **irssi**  
-  
+
 		llvm-gcc-4.2: -E, -S, -save-temps and -M options are not allowed with multiple -arch flags
-		
+
 	Fix this issue by removing every occurrences of `--arch i386` in files:
-	
+
 		- ./Makefile
 		- ./src/perl/textui/Makefile
-		- ./src/perl/ui/Makefile 
+		- ./src/perl/ui/Makefile
 
 3. **switch windows with alt + number**
 
-	<kbd>&#x2325; + number</kbd> to switch windows won't work, fix this by checking "Use option as meta key" flag in Terminal.app's **Preferences -> Settings -> Keyboard**. 
-
+	<kbd>&#x2325; + number</kbd> to switch windows won't work, fix this by checking "Use option as meta key" flag in Terminal.app's **Preferences -> Settings -> Keyboard**.
