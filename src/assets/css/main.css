@@ -41,6 +41,10 @@ footer {
     font-weight: bold;
 }
 
+.clear {
+    clear: both;
+}
+
 /*
 Responsive YouTube Embed
 Via: http://avexdesigns.com/responsive-youtube-embed/
