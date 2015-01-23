@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Droid+Serif);
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif);
 body {
     font-family: 'Droid Serif', serif;
 }
@@ -55,7 +55,7 @@ Via: http://avexdesigns.com/responsive-youtube-embed/
     padding-bottom: 56.25%;
     padding-top: 30px; height: 0; overflow: hidden;
 }
- 
+
 .video-container iframe,
 .video-container object,
 .video-container embed {
