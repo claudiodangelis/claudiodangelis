@@ -7,8 +7,8 @@ Options -Indexes
 
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    RewriteCond %{HTTP:CF-Visitor} !'"scheme":"http"'
-    RewriteRule ^(.*)$ https://www.claudiodangelis.com/$1 [L]
+    RewriteCond %{HTTP:X-Forwarded-Proto} =http
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 </IfModule>
 
 <IfModule mod_alias.c>
