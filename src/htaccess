@@ -7,9 +7,8 @@ Options -Indexes
 
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    RewriteCond %{SERVER_PORT} !=443
-    RewriteCond %{HTTP_HOST} ^(www\.)?claudiodangelis\.com$ [NC]
-    RewriteRule ^$ https://www.claudiodangelis.com/%{REQUEST_URI} [R,L]
+    RewriteCond %{HTTPS} !on
+    RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
 </IfModule>
 
 <IfModule mod_alias.c>
