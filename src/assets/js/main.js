@@ -1,6 +1,7 @@
 $(window).load(function() {
-
-
+    if (typeof console === "object") {
+        console.log("\nNel cielo e nelle altre cose mute\nTerramadre\nNon senza dolore\nIo vivo\nNè più di un albero non meno di una stella\nNei suoni e nei silenzi\nDi terra\n\n(Francesco Di Giacomo)\n\n");
+    }
 
     var imgs = document.getElementsByTagName("img");
     for (var i = 0; i < imgs.length; i++) {
@@ -33,7 +34,7 @@ $(window).load(function() {
                 case 222:
                     // ?
                     $('#shortcuts').modal();
-                    break;                
+                    break;
             }
             if ( typeof url != 'undefined' &&
                 document.location.pathname.toString() != url ) {
