@@ -74,6 +74,12 @@
     (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
     }());
     </script>
-
+    <script src="/vendor/cookieChoices/cookiechoices.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function(event) {
+        cookieChoices.showCookieConsentBar('<strong>Heads up!</strong> This website stores third-party cookies',
+            'Ok, I understand', 'Info', '/');
+      });
+    </script>
 </body>
 </html>
