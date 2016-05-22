@@ -100,3 +100,8 @@ th, td {
         text-align: center;
     }
 }
+figcaption {
+    font-size: small;
+    font-style: italic;
+    text-align: center;
+}
