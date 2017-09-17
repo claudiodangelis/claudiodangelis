@@ -12,4 +12,4 @@ highlighter: true
 permalink: /:year/:title/
 markdown: kramdown
 excerpt_separator: "<!--more-->"
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]

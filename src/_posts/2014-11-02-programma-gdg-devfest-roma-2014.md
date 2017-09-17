@@ -1,6 +1,6 @@
 ---
 layout: default
-title: GDG DevFest Roma 2014 
+title: GDG DevFest Roma 2014
 lang: it
 category: events
 ---
@@ -44,4 +44,3 @@ Info utili:
 
 
 Ci vediamo là ;)
-
